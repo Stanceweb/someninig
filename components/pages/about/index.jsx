@@ -21,7 +21,7 @@ const AboutUs = () => {
             <HeaderTwo />
             <BreadCrumb title="About Us" innerTitle="About Us" />
             <AboutMain />
-            <Video />
+            {/* <Video /> */}
             <Certification />
             <Team />
             <FooterTwo />
