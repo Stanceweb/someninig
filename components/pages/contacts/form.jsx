@@ -22,13 +22,24 @@ const FormArea = () => {
         setIsSubmitting(true);
         setSubmitStatus(null);
 
+        // Map form fields to API fields
+        const payload = {
+            to: formData.email,
+            subject: formData.subject || "Contact Form Submission",
+            text: `Name: ${formData.name}\nEmail: ${formData.email}\nMessage: ${formData.message}`,
+            html: `<p><strong>Name:</strong> ${formData.name}</p>
+                   <p><strong>Email:</strong> ${formData.email}</p>
+                   <p><strong>Message:</strong> ${formData.message}</p>`,
+            name: formData.name
+        };
+
         try {
             const response = await fetch('/api/send-email', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
                 },
-                body: JSON.stringify(formData),
+                body: JSON.stringify(payload),
             });
 
             if (response.ok) {
@@ -107,10 +118,16 @@ const FormArea = () => {
                     </div>
                 </div>
                 {submitStatus === 'success' && (
-                    <div className="alert alert-success mt-3">Message sent successfully! We'll get back to you soon.</div>
+                    <div className="contact-message success-message">
+                        <i className="fa fa-check-circle" style={{color: "#28a745", marginRight: "8px"}}></i>
+                        Message sent successfully! We'll get back to you soon.
+                    </div>
                 )}
                 {submitStatus === 'error' && (
-                    <div className="alert alert-danger mt-3">Failed to send message. Please try again.</div>
+                    <div className="contact-message error-message">
+                        <i className="fa fa-times-circle" style={{color: "#dc3545", marginRight: "8px"}}></i>
+                        Failed to send message. Please try again.
+                    </div>
                 )}
             </form>          
         </>

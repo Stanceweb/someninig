@@ -1,0 +1,22 @@
+/* ...existing code... */
+.contact-message {
+  margin-top: 20px;
+  padding: 12px 18px;
+  border-radius: 6px;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+.success-message {
+  background: #eafaf1;
+  color: #28a745;
+  border: 1px solid #28a745;
+}
+.error-message {
+  background: #fdeaea;
+  color: #dc3545;
+  border: 1px solid #dc3545;
+}
+/* ...existing code... */
