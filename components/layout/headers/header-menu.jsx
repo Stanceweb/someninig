@@ -26,13 +26,13 @@ const MainMenu = () => {
                         <li><Link href='/testimonial'>Testimonials</Link></li>
                         {/* <li><Link href='/pricing-plans'>Price Plans</Link></li> */}
                         <li><Link href='/faq'>FAQ's</Link></li>
-                        <li className><Link href='/team'>Teams</Link>
-                            {/* <ul className='sub-menu'>
+                        {/* <li className><Link href='/team'>Teams</Link>
+                            <ul className='sub-menu'>
                                 <li><Link href='/team'>Team 01</Link></li>
                                 <li><Link href='/team-two'>Team 02</Link></li>
                                 <li><Link href='/team-three'>Team 03</Link></li>
-                            </ul> */}
-                        </li>
+                            </ul>
+                        </li> */}
                         <li><Link href='/request-quote'>Request Quote</Link></li>
                         {/* <li><Link href='/404-error'>404 Page</Link></li> */}
                     </ul>

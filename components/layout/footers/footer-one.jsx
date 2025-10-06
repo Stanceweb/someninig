@@ -13,7 +13,7 @@ const FooterOne = () => {
                                 <div className="row al-center">
                                     <div className="col-lg-8 lg-t-center lg-mb-25">
                                         <div className="footer__one-cta-title title_split_anim">
-                                            <h2>Your Dream Project Awaits — Get Started Today!</h2>
+                                            <h2>Your Dream Project Awaits — Request a Quote Today!</h2>
                                         </div>
                                     </div>
                                     <div className="col-lg-4">

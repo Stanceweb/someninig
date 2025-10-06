@@ -77,7 +77,7 @@ const ResponsiveMenu = () => {
             </ul>
             <a className={`mean-expand ${activeIcon("blog")}`} onClick={() => active("blog")}></a> */}
         </li>
-        {/* <li><Link href='/contact'>Contact</Link> */}
+        <li><Link href='/contact-us'>Contact</Link>
             {/* <ul className='sub-menu' style={activeSubMenu("contact")}>
                 <li><Link href='/contact'>Contact Style 01</Link></li>
                 <li><Link href='/contact-two'>Contact Style 02</Link></li>
@@ -85,7 +85,7 @@ const ResponsiveMenu = () => {
                 <li><Link href='/contact-four'>Contact Style 04</Link></li>
             </ul>
             <a className={`mean-expand ${activeIcon("contact")}`} onClick={() => active("contact")}></a> */}
-        {/* </li>       */}
+        </li>      
     </ul>  
     </>
   );

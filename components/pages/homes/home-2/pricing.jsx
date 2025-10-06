@@ -31,7 +31,7 @@ const PricingPlan = () => {
                                 </ul>
                             </div>
                             <div className="price__area-item-btn">
-                                <Link className="build_button" href="/contact-us">Get Started<i className="flaticon-right-up"></i></Link>
+                                <Link className="build_button" href="/contact-us">Request a Quote<i className="flaticon-right-up"></i></Link>
                             </div>
                         </div>
                     </div>
@@ -53,7 +53,7 @@ const PricingPlan = () => {
                                 
                             </div>
                             <div className="price__area-item-btn">
-                                <Link className="build_button" href="/contact-us">Get Started<i className="flaticon-right-up"></i></Link>
+                                <Link className="build_button" href="/contact-us">Request a Quote<i className="flaticon-right-up"></i></Link>
                             </div>
                         </div>
                     </div>
@@ -74,7 +74,7 @@ const PricingPlan = () => {
                                 </ul>                            
                             </div>
                             <div className="price__area-item-btn">
-                                <Link className="build_button" href="/contact-us">Get Started<i className="flaticon-right-up"></i></Link>
+                                <Link className="build_button" href="/contact-us">Request a Quote<i className="flaticon-right-up"></i></Link>
                             </div>
                         </div>
                     </div>

@@ -24,7 +24,7 @@ const FormArea = () => {
 
         // Map form fields to API fields
         const payload = {
-            to: formData.email,
+            to: "contactsomeni@yahoo.com", // Always send to this address
             subject: formData.subject || "Contact Form Submission",
             text: `Name: ${formData.name}\nEmail: ${formData.email}\nMessage: ${formData.message}`,
             html: `<p><strong>Name:</strong> ${formData.name}</p>

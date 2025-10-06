@@ -6,33 +6,33 @@ import image5 from "../../public/assets/img/portfolio/portfolio-5.jpg";
 
 const historyData = [
     {
-        date: "2010",
-        title: "Founded Someni Nigeria Limited",
-        description: "Someni Nigeria Limited was established in Lagos, marking the beginning of our journey in construction innovation and oil field services across Nigeria.",
+        date: "1992",
+        title: "First Major Project and Daewoo Partnership Begins",
+        description: "Someni Nigeria Limited commenced operations with manpower supply to Daewoo Nigeria Ltd. for oil projects in Rivers State, initiating a 28-year partnership and community relations management in Delta and Rivers States.",
         image: image1,
     },
     {
-        date: "2014",
-        title: "Opened Lagos Office",
-        description: "We expanded our operations with a new office in Lagos, enhancing our capacity for sustainable development and residential construction projects.",
+        date: "1993",
+        title: "Official Incorporation as RC 237018",
+        description: "Incorporated on December 14, 1993, as a private limited company with N20,500,000 authorized share capital, establishing headquarters in Effurun, Delta State, to provide engineering services for Nigeria's oil and gas sector.",
         image: image2,
     },
     {
-        date: "2018",
-        title: "Launched Project Management Division",
-        description: "Our project management division in Abuja began, delivering efficient solutions for commercial and oil field construction projects in Nigeria.",
+        date: "1998",
+        title: "Key Oil Field Milestones",
+        description: "Executed major projects including rehabilitation of 60,000 Bbls crude oil storage tank and construction of 32.5 km 12-inch Warri flowline, solidifying expertise in pipeline and tank construction in Delta State.",
         image: image3,
     },
     {
-        date: "2021",
-        title: "Established Research Team",
-        description: "Someni Nigeria Limited formed a research team focused on sustainable building practices, driving innovation in Nigeria’s construction sector.",
+        date: "2007",
+        title: "Chevron Escravos Gas Project Execution",
+        description: "Fabrication and installation of underground carbon steel & HDPE piping for Chevron's Phase 3 Escravos Gas Project, demonstrating advanced oil and gas infrastructure capabilities in Nigeria's energy sector.",
         image: image4,
     },
     {
-        date: "2025",
-        title: "Received Sustainability Award",
-        description: "In September 2025, Someni Nigeria Limited was honored with the Nigeria Construction Sustainability Award for our eco-friendly oil field project in the Niger Delta.",
+        date: "2018",
+        title: "Refinery Expansion and Recent Growth",
+        description: "Handled multiple Niger Delta Petroleum Resources (NDPR) refinery expansions in Ogbelle Field, including HDPE fire water pipelines and earthworks, continuing Someni's leadership in sustainable oil field services as of 2025.",
         image: image5,
     },
 ];
