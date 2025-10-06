@@ -23,7 +23,7 @@ const AboutUs = () => {
             <AboutMain />
             {/* <Video /> */}
             <Certification />
-            <Team />
+            {/* <Team /> */}
             <FooterTwo />
             <ScrollToTop />
         </>

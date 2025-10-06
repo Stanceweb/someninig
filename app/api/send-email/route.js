@@ -28,7 +28,7 @@ export async function POST(request) {
     const responseMessage = `Hi ${name || "there"},\n\nThank you for reaching out to Someni Nigeria Limited! We appreciate your interest in our engineering and specialist services. Our team has received your message and will respond as soon as possible.\n\nIf your inquiry is urgent, please call us at 08068472444 or 08030646966 for immediate assistance.\n\nBest regards,\nSomeni Nigeria Limited\nPlot 1 Effurun / DSC Express Way, Effurun, Delta State, Nigeria\nwww.someninig.com`;
 
     await transporter.sendMail({
-      from: process.env.ZOHO_EMAIL, // Changed from process.env.EMAIL_USER to match authenticated user
+      from: "contact@someninigltd.com", // Changed from process.env.EMAIL_USER to match authenticated user
       to,
       subject: "Thank you for contacting Someni Nigeria Limited",
       text: responseMessage,
