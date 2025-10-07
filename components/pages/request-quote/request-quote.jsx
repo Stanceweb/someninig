@@ -33,38 +33,23 @@ const RequestQuoteMain = () => {
 		setIsSubmitting(true);
 		setSubmitStatus(null);
 
-		const payload = {
-			to: "contact@someninigltd.com", // for testing, use your Zoho address
-			subject: "Request Quote Submission",
-			text: `
-First Name: ${formData.firstName}
-Last Name: ${formData.lastName}
-Email: ${formData.email}
-Phone: ${formData.phone}
-Company: ${formData.company}
-State: ${formData.state}
-Services: ${formData.services.join(', ')}
-Message: ${formData.message}
-			`,
-			html: `
-				<p><strong>First Name:</strong> ${formData.firstName}</p>
-				<p><strong>Last Name:</strong> ${formData.lastName}</p>
-				<p><strong>Email:</strong> ${formData.email}</p>
-				<p><strong>Phone:</strong> ${formData.phone}</p>
-				<p><strong>Company:</strong> ${formData.company}</p>
-				<p><strong>State:</strong> ${formData.state}</p>
-				<p><strong>Services:</strong> ${formData.services.join(', ')}</p>
-				<p><strong>Message:</strong> ${formData.message}</p>
-			`,
-			name: `${formData.firstName} ${formData.lastName}`
-		};
-
 		try {
-			const response = await fetch('/api/send-email', {
+			const response = await fetch('/__forms.html', {
 				method: 'POST',
-				headers: { 'Content-Type': 'application/json' },
-				body: JSON.stringify(payload),
+				headers: { "Content-Type": "application/x-www-form-urlencoded" },
+				body: new URLSearchParams({
+					'form-name': 'request-quote',
+					'firstName': formData.firstName,
+					'lastName': formData.lastName,
+					'email': formData.email,
+					'phone': formData.phone,
+					'company': formData.company,
+					'state': formData.state,
+					'services': formData.services.join(', '),
+					'message': formData.message
+				}).toString()
 			});
+
 			if (response.ok) {
 				setSubmitStatus('success');
 				setFormData({
@@ -80,7 +65,7 @@ Message: ${formData.message}
 			} else {
 				setSubmitStatus('error');
 			}
-		} catch {
+		} catch (error) {
 			setSubmitStatus('error');
 		} finally {
 			setIsSubmitting(false);
@@ -93,7 +78,18 @@ Message: ${formData.message}
 				<div className="container">
 					<div className="row">
 						<div className="col-xl-12">
-							<form onSubmit={handleSubmit}>
+							<form 
+								name="request-quote" 
+								method="POST" 
+								data-netlify="true" 
+								data-netlify-honeypot="bot-field"
+								onSubmit={handleSubmit}
+							>
+								{/* Hidden fields for Netlify Forms */}
+								<input type="hidden" name="form-name" value="request-quote" />
+								<p style={{ display: 'none' }}>
+									<label>Don't fill this out if you're human: <input name="bot-field" /></label>
+								</p>
 								<div className="row">
 									<div className="col-md-6 mt-30">
 										<div className="request__quote-item">

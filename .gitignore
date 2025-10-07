@@ -34,3 +34,6 @@ public/assets/css/*.map
 
 # Misc
 *.log
+
+# Local Netlify folder
+.netlify
