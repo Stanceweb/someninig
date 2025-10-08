@@ -112,5 +112,11 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
+  <url>
+    <loc>https://someninigltd.com/certifications/</loc>
+    <lastmod>2024-06-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
   <!-- Add more dynamic URLs as needed -->
 </urlset>

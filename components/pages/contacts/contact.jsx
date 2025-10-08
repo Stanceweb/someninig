@@ -40,7 +40,7 @@ const ContactMain = () => {
                                         </div>
                                         <div className="contact__area-left-contact-item-content">
                                             <span>Location:</span>
-                                            <h6><Link href="https://www.google.com/maps/search/?api=1&query=Plot+1+Effurun+DSC+Express+Way,+Effurun,+Delta+State,+Nigeria" target="_blank">Plot 1 Effurun / DSC Express Way, Effurun, Delta State, Nigeria</Link></h6>
+                                            <h6><Link href="https://www.google.com/maps/search/?api=1&query=NO+49,+Uti+Street,+Off+PTI+Road,+Effurun,+Delta+State" target="_blank">NO 49, Uti Street, Off PTI Road, Effurun, Delta State</Link></h6>
                                         </div>
                                     </div>
                                 </div>

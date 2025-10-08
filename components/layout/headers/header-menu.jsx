@@ -23,6 +23,8 @@ const MainMenu = () => {
                                 <li><Link href='/services/building-architecture'>Services Details</Link></li>
                             </ul> */}
                         </li>
+                        <li className><Link href='/certifications'>Certifications</Link></li>
+
                         <li><Link href='/testimonial'>Testimonials</Link></li>
                         {/* <li><Link href='/pricing-plans'>Price Plans</Link></li> */}
                         <li><Link href='/faq'>FAQ's</Link></li>
