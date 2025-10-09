@@ -23,7 +23,7 @@ const ContactUs = () => {
                         <div className="col-xl-12 wow fadeInUp" data-wow-delay=".4s">
                             <div className="map-area">
                                 <iframe
-                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3971.0313763716044!2d5.777449774158852!3d5.56236779441809!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1041ada4ffffffff%3A0xc4226621b76d08af!2sSomeni%20Nigeria%20Limited!5e0!3m2!1sen!2sng!4v1759348573516!5m2!1sen!2sng"
+                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31768.299890809758!2d5.76570245!3d5.561462499999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1041ad82562e1d41%3A0x5344758927cfc660!2sUti!5e0!3m2!1sen!2snl!4v1759955494507!5m2!1sen!2snl"
                                     width="600"
                                     height="450"
                                     style={{ border: 0 }}

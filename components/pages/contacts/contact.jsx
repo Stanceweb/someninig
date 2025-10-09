@@ -40,7 +40,7 @@ const ContactMain = () => {
                                         </div>
                                         <div className="contact__area-left-contact-item-content">
                                             <span>Location:</span>
-                                            <h6><Link href="https://www.google.com/maps/search/?api=1&query=NO+49,+Uti+Street,+Off+PTI+Road,+Effurun,+Delta+State" target="_blank">NO 49, Uti Street, Off PTI Road, Effurun, Delta State</Link></h6>
+                                            <h6><Link href="https://maps.app.goo.gl/CDYMLqBjQcsLbicc6" target="_blank">NO 49, Uti Street, Off PTI Road, Effurun, Delta State</Link></h6>
                                         </div>
                                     </div>
                                 </div>
