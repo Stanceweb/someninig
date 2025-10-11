@@ -8,8 +8,8 @@ const Team = () => {
                 <div className="row mb-35">
                     <div className="col-xl-12">
                         <div className="team__area-title t-center">
-                            <span className="subtitle wow fadeInLeft" data-wow-delay=".4s">Meet Our Experts</span>
-                            <h2 className="title_split_anim">Dedicated Professionals</h2>
+                            <span className="subtitle wow fadeInLeft" data-wow-delay=".4s">We Are Licensed & Insured</span>
+                            <h2 className="title_split_anim">OUR CERTIFICATION</h2>
                         </div>
                     </div>
                 </div>
