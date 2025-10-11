@@ -14,14 +14,10 @@ const Team = () => {
                     </div>
                 </div>
                 <div className="row">
-                    {teamData?.slice(0, 4).map((data, id) => (
-                        <div className="col-lg-3 col-md-6 mt-25" key={id}>
+                    {teamData?.slice(0, 4).map((data) => (
+                        <div className="col-lg-3 col-md-6 mt-25" key={data.id}>
                             <div className="team__area-item">
-                                <img className="img_full" src={data.image.src} alt="image" />
-                                <div className="team__area-item-content t-center pt-20">
-                                    <h5>{data.name}</h5>
-                                    <span>{data.position}</span>
-                                </div>
+                                <img className="img_full" src={data.image.src} alt="certification" />
                             </div>
                         </div>
                     ))}
