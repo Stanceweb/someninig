@@ -17,7 +17,7 @@ const serviceDetails = [
 
                 <h3 className="mt-25 mb-20">Scope of Certification</h3>
                 <p className="mb-20">
-                    The certification covers providing construction services for onshore pipeline laying works and manpower supply community relations related management consultancy services. This ensures our processes meet international standards for efficiency, safety, and client satisfaction in projects like pipeline installation and community engagement in Delta State.
+                    The certification covers providing construction services for onshore pipeline laying works and manpower supply community relations related management consultancy services. This ensures our processes meet international standards for efficiency, safety, and client satisfaction in projects like pipeline installation and community engagement in Nigeria.
                 </p>
 
                 <h3 className="mt-25 mb-20">Key Dates and Validity</h3>
