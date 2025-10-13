@@ -11,6 +11,7 @@ import Team from "./team";
 import FooterOne from "@/components/layout/footers/footer-one";
 import ScrollToTop from "../common/scroll/scroll-to-top";
 import FooterTwo from "@/components/layout/footers/footer-two";
+import Slideshow from "../slideshow/slideshow";
 
 const AboutUs = () => {
     return (
@@ -24,6 +25,7 @@ const AboutUs = () => {
             {/* <Video /> */}
             <Certification />
             <Team />
+            <Slideshow />
             <FooterTwo />
             <ScrollToTop />
         </>

@@ -46,16 +46,6 @@ const blogData = [
         description: 'Someni Nigeria Limited offers top-tier manpower supply for oil field construction Warri, with over 100 skilled workers enhancing projects in the Nigeria oil sector.',
         delay: '0.4',
     },
-    // {
-    //     number: '05',
-    //     id: 'someni-security-services-in-nigeria',
-    //     date: 'May 15, 2025',
-    //     comment: '4',
-    //     title: 'Someni Nigeria Limited’s Security Services in Warri Oil Sector',
-    //     image: image5,
-    //     description: 'Find out how Someni Nigeria Limited provides advanced security services Warri, protecting oil field assets with cutting-edge surveillance in the Nigeria oil sector.',
-    //     delay: '0.7',
-    // },
     {
         number: '05',
         id: 'someni-certifications-and-partnerships',
@@ -63,7 +53,7 @@ const blogData = [
         comment: '2',
         title: 'Someni Nigeria Limited’s Certifications and Warri Partnerships',
         image: image6,
-        description: 'Someni Nigeria Limited boasts ISO 9001 and OHSAS 18001 certifications, strengthening its reputation for oil field construction Warri and collaborations in the Nigeria oil sector.',
+        description: 'Someni Nigeria Limited boasts ISO 9001, OGTAN, NIPEX, and Bureau of Public Procurement certifications, strengthening its reputation for oil field construction Warri and collaborations in the Nigeria oil sector.',
         delay: '1',
     },
 ];

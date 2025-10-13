@@ -1,4 +1,5 @@
 "use client"
+import React, { Suspense } from "react";
 import SEO from "@/components/data/seo";
 import BreadCrumb from "../../common/breadcrumb";
 import BlogStandardMain from "./blog-standard";
@@ -9,7 +10,6 @@ import CustomCursor from "../../common/cursor";
 import HeaderTwo from "@/components/layout/headers/header-two";
 import FooterTwo from "@/components/layout/footers/footer-two";
 
-
 const BlogStandardPage = () => {
     return (
         <>
@@ -18,7 +18,20 @@ const BlogStandardPage = () => {
             <CustomCursor />
             <HeaderTwo />
             <BreadCrumb title="Blog Standard" innerTitle="Blog Standard" />
-            <BlogStandardMain />
+            <Suspense fallback={
+                <div style={{ 
+                    display: 'flex', 
+                    justifyContent: 'center', 
+                    alignItems: 'center', 
+                    minHeight: '400px',
+                    fontSize: '1.2rem',
+                    color: '#666'
+                }}>
+                    Loading blog posts...
+                </div>
+            }>
+                <BlogStandardMain />
+            </Suspense>
             <FooterTwo />
             <ScrollToTop />
         </>

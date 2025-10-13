@@ -5,7 +5,7 @@ import avatar1 from '../../../../public/assets/img/team/member-5.jpg';
 import avatar2 from '../../../../public/assets/img/team/member-3.jpg';
 import avatar3 from '../../../../public/assets/img/team/member-1.jpg';
 import image1 from '../../../../public/assets/img/about/about-1.jpg';
-import image2 from '../../../../public/assets/img/page/choose-us.jpg';
+import image2 from '../../../../public/assets/img/about/choose-us.jpg';
 import FormArea from '../../contacts/form';
 import blogData from '@/components/data/blog-data';
 

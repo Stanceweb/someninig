@@ -2,7 +2,7 @@ import Link from "next/link";
 import portfolioData from '../../../data/portfolio-data';
 
 const PortfolioTwo = () => {
-    const portfolioItem = portfolioData.slice(0, 4);
+    const portfolioItem = portfolioData.slice(2, 6);
     return (
         <div className="portfolio__two section-padding">
             <div className="container">
