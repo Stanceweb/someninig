@@ -41,17 +41,8 @@ const ResponsiveMenu = () => {
                 title="Someni AI Chat (opens in new tab)"
                 aria-label="Someni AI Chat (opens in new tab)"
             >
-                </ul>
-                </>
-              );
-						<li><Link href='/portfolio/3-columns'>3 Columns</Link></li>
-						<li><Link href='/portfolio/4-columns'>4 Columns</Link></li>
-					</ul>
-                    <a className={`mean-expand ${activeIcons("grid")}`} onClick={() => actives("grid")}></a>
-				</li>
-                <li><Link href='/portfolio/business-analytics'>Project Details</Link></li>
-            </ul> */}
-            {/* <a className={`mean-expand ${activeIcon("project")}`} onClick={() => active("project")}></a> */}
+                Someni AI
+            </Link>
         </li>
         <li><Link href='/blog-standard'>Blog</Link>
             {/* <ul className='sub-menu' style={activeSubMenu("blog")}>
