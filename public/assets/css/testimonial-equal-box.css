@@ -1,0 +1,110 @@
+/* Swiper slide wrapper - ensure full height */
+.testimonial_slide .swiper-slide {
+  display: flex !important;
+  align-items: stretch;
+  height: auto;
+}
+
+.testimonial_slide .swiper-slide > div {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+/* Testimonial item card - equal height */
+.testimonial__one-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  min-height: 360px;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.07);
+  padding: 32px 24px;
+  margin-bottom: 24px;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+.testimonial__one-item p {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  margin: 16px 0;
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+
+.testimonial__one-item-client {
+  display: flex;
+  align-items: center;
+  margin-top: auto;
+  padding-top: 16px;
+  border-top: 1px solid #f0f0f0;
+}
+
+.testimonial__one-item-client-image img {
+  width: 56px;
+  height: 56px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-right: 12px;
+  flex-shrink: 0;
+}
+
+.testimonial__one-item-client-title {
+  flex: 1;
+}
+
+.testimonial__one-item-client-title h4 {
+  font-size: 1rem;
+  margin-bottom: 2px;
+  font-weight: 600;
+}
+
+.testimonial__one-item-client-title span {
+  font-size: 0.85rem;
+  color: #888;
+  display: block;
+}
+
+.testimonial__one-item-reviews {
+  margin-bottom: 12px;
+  color: #ffc107;
+  font-size: 0.9rem;
+}
+
+.testimonial__one-item-reviews i {
+  margin-right: 2px;
+}
+
+/* Grid layout - equal height cards */
+.col-lg-6 .testimonial__one-item {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+@media (max-width: 1024px) {
+  .testimonial__one-item {
+    min-height: 320px;
+    padding: 24px 16px;
+  }
+}
+
+@media (max-width: 768px) {
+  .testimonial__one-item {
+    min-height: 280px;
+    padding: 20px 12px;
+  }
+
+  .testimonial__one-item-client-image img {
+    width: 48px;
+    height: 48px;
+  }
+
+  .testimonial__one-item-client-title h4 {
+    font-size: 0.95rem;
+  }
+}

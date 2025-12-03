@@ -31,6 +31,7 @@ const ResponsiveMenu = () => {
                 {/* <li><Link href='/pricing-plans'>Price Plans</Link></li> */}
                 <li><Link href='/faq'>FAQ's</Link></li>
                 <li><Link href='/testimonial'>Testimonials</Link></li>
+			<li><Link href='/awards'>Awards &amp; Recognitions</Link></li>
 				<li><Link href='/team-two'>Teams</Link>
                     {/* <ul className='sub-menu' style={activeSubMenus("team")}>
 						<li><Link href='/team-filter'>Team Filter</Link></li>
