@@ -7,7 +7,6 @@ import HeaderTwo from "@/components/layout/headers/header-two";
 import SwitchTab from "../../common/dark-light";
 import CustomCursor from "../../common/cursor";
 import FooterTwo from "@/components/layout/footers/footer-two";
-import "../../../public/assets/css/certifications-page.css";
 
 const Certifications = () => {
     return (
