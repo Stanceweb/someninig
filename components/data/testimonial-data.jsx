@@ -39,10 +39,10 @@ const testimonialData = [
     // },
     {
            id: '05',
-           name: 'NAOC',
+           name: 'DAEWOO Nigeria Ltd',
            position: 'Project Manager',
            des: 'Someni Nigeria Limited successfully completed the construction, welding, and laying of 10" and 18" pipelines, each spanning 32.9 km, for the NLNG Phase 3 gas supply project. Their technical expertise, reliability, and commitment to safety ensured the project was delivered to the highest standards, supporting Nigeria’s energy infrastructure.',
-           avatar: avatar3,
+           avatar: avatar1,
     },
     {
         id: '06',
