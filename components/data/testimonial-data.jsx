@@ -23,13 +23,13 @@ const testimonialData = [
         des: 'SPDC is incredibly impressed with Someni Nigeria Limited’s flawless execution of the 10" x 3.2km & 10" x 5.84km Utorogu-Ughelli East Domgas Vo2 pipeline project in Delta State, completed in 2013. Their pipeline construction skills and dedication to minimal downtime exceeded our expectations—truly a job well done!',
         avatar: avatar2,
     },
-    {
-           id: '03',
-           name: 'AGIP',
-           position: 'Engineering Manager',
-           des: 'We are continually thrilled with Someni Nigeria Limited’s exceptional manpower supply and execution of our diverse engineering construction projects in the oil and gas sector of Nigeria from 1992 to date. Their reliability, technical expertise, and commitment to quality have made them a trusted partner for our operations year after year.',
-           avatar: avatar3,
-    },
+        {
+            id: '03',
+            name: 'DAEWOO',
+            position: 'Engineering Manager',
+            des: 'DAEWOO Nigeria Ltd highly appreciates Someni Nigeria Limited’s exceptional manpower supply and community relations management for multiple oil projects in Rivers State from 1998 to 2005. Their professionalism and commitment to our long-standing partnership have been instrumental in our operational success—excellent work indeed!',
+            avatar: avatar1,
+        },
     // {
     //     id: '04',
     //     name: 'CHEVRON',
@@ -39,10 +39,10 @@ const testimonialData = [
     // },
     {
            id: '05',
-           name: 'DAEWOO Nigeria Ltd',
+           name: 'NAOC',
            position: 'Project Manager',
            des: 'Someni Nigeria Limited successfully completed the construction, welding, and laying of 10" and 18" pipelines, each spanning 32.9 km, for the NLNG Phase 3 gas supply project. Their technical expertise, reliability, and commitment to safety ensured the project was delivered to the highest standards, supporting Nigeria’s energy infrastructure.',
-           avatar: avatar1,
+           avatar: avatar3,
     },
     {
         id: '06',

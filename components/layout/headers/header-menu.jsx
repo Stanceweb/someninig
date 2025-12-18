@@ -19,7 +19,7 @@ const MainMenu = () => {
                         <li><Link href='/request-quote' title="Request a Quote">Request Quote</Link></li>
                     </ul>
                 </li>
-                <li><Link href='/gallery' title="Portfolio Gallery">Portfolio</Link></li>
+                <li><Link href='/portfolio/3-columns' title="Portfolio Gallery">Portfolio</Link></li>
                 <li><Link href='/blog-standard' title="Blog">Blog</Link></li>
                 <li>
                     {/* External AI chat link */}

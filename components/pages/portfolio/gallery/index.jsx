@@ -17,7 +17,7 @@ const PortfolioFilterPage = () => {
             <SwitchTab />
             <HeaderTwo />
             <BreadCrumb title="Filterable Gallery" innerTitle="Filterable Gallery" />
-            <PortfolioFilter />
+            
             <FooterTwo />
             <ScrollToTop />
         </>

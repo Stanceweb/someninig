@@ -31,7 +31,7 @@ const ResponsiveMenu = () => {
             </ul>
             <a className={`mean-expand ${activeIcon("pages")}`} onClick={() => active("pages")}></a>
         </li>
-        <li><Link href='/gallery' title="Portfolio Gallery">Portfolio</Link></li>
+        <li><Link href='/portfolio/3-columns' title="Portfolio Gallery">Portfolio</Link></li>
         <li><Link href='/blog-standard' title="Blog">Blog</Link></li>
         <li>
             <Link 
