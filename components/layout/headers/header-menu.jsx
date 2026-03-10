@@ -20,6 +20,15 @@ const MainMenu = () => {
                     </ul>
                 </li>
                 <li><Link href='/portfolio/3-columns' title="Portfolio Gallery">Portfolio</Link></li>
+                <li className='menu-item-has-children'>
+                    <Link href='/services/tools' title="Construction Tools">Tools</Link>
+                    <ul className='sub-menu'>
+                        <li><Link href='/services/tools/cost-calculator' title="Project Cost Calculator">Cost Calculator</Link></li>
+                        <li><Link href='/services/tools/material-calculator' title="Material Calculator">Material Calculator</Link></li>
+                        <li><Link href='/services/tools/instant-quote' title="Instant Quote Generator">Instant Quote</Link></li>
+                        <li><Link href='/services/tools/timeline-estimator' title="Project Timeline Estimator">Timeline Estimator</Link></li>
+                    </ul>
+                </li>
                 <li><Link href='/blog-standard' title="Blog">Blog</Link></li>
                 <li>
                     {/* External AI chat link */}
