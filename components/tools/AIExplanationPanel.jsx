@@ -9,6 +9,7 @@ const AIExplanationPanel = ({ toolName, inputs, outputs }) => {
     const [loading, setLoading] = useState(false);
     const [result, setResult] = useState("");
     const [error, setError] = useState("");
+    const providerLabel = `${AI_CONFIG.OLLAMA_MODEL} via ${AI_CONFIG.OLLAMA_BASE_URL.replace(/^https?:\/\//, "")}`;
 
     if (!AI_CONFIG.ENABLE_AI) return null;
 
@@ -34,14 +35,15 @@ const AIExplanationPanel = ({ toolName, inputs, outputs }) => {
                 <div>
                     <strong className={styles.aiTitle}>AI Estimate Explanation</strong>
                     <p className={styles.aiSubtitle}>
-                        Get a plain-English breakdown of this estimate powered by AI
+                        Get a BOQ-style material/labour breakdown plus a plain-English summary
                     </p>
+                    <p className={styles.aiMeta}>{providerLabel}</p>
                 </div>
             </div>
             {!result && !error && !loading ? (
                 <button type="button" className={styles.aiButton} onClick={handleExplain}>
                     <span className={styles.aiButtonIcon}>🤖</span>
-                    Explain This Estimate with AI
+                    Generate BOQ-style Breakdown with AI
                 </button>
             ) : null}
             {loading ? (

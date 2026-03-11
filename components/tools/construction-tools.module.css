@@ -557,6 +557,13 @@
     line-height: 1.4;
 }
 
+.aiMeta {
+    color: #1f7a8c;
+    font-size: 0.76rem;
+    margin: 0.25rem 0 0;
+    line-height: 1.4;
+}
+
 .aiButton {
     width: 100%;
     min-height: 48px;

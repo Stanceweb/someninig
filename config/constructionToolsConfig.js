@@ -27,6 +27,8 @@ export const AI_CONFIG = {
     OLLAMA_NUM_PREDICT: 500,
     OLLAMA_TOP_P: 0.9,
     OLLAMA_STREAM: false,
+    OLLAMA_MAX_RETRIES: 1,
+    OLLAMA_RETRY_DELAY_MS: 1200,
 };
 
 /**
