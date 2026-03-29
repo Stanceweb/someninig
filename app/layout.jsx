@@ -1,28 +1,26 @@
-"use client";
-import { useEffect } from "react";
 import "./globals.css";
+import ClientProviders from "@/components/layout/ClientProviders";
+
+export const metadata = {
+    title: "Someni Nigeria Limited",
+    description: "Leading construction and engineering solutions in Nigeria.",
+    icons: {
+        icon: "/favicon.ico",
+    },
+};
+
+export const viewport = {
+    width: "device-width",
+    initialScale: 1,
+};
 
 export default function RootLayout({ children }) {
-    useEffect(() => {
-        // Dynamically import Bootstrap JavaScript
-        import("bootstrap/dist/js/bootstrap.min.js");
-
-        // Dynamically import WOW.js and initialize
-        import("wowjs").then(({ WOW }) => {
-            new WOW({ live: false }).init();
-        });
-    }, []);
-
     return (
         <html lang="en">
-            <head>
-                <meta charSet="UTF-8" />
-                <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-                <title>Someni Nigeria Limited</title>
-                <link rel="icon" type="image/png" href="/favicon.ico" />
-            </head>
             <body>
-                {children}
+                <ClientProviders>
+                    {children}
+                </ClientProviders>
             </body>
         </html>
     );

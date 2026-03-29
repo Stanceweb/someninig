@@ -17,57 +17,42 @@ const ResponsiveMenu = () => {
   return (
     <>    
     <ul>
-        <li><Link href='/home-two'>Home</Link>
-            {/* <ul className='sub-menu' style={activeSubMenu("home")}>
-                <li><Link href='/'>Main Business</Link></li>
-                <li><Link href='/home-two'>Consulting Business</Link></li>
-                <li><Link href='/home-three'>Business Solutions</Link></li>
-            </ul> */}
-            {/* <a className={`mean-expand ${activeIcon("home")}`} onClick={() => active("home")}></a> */}
-        </li>  
-        <li className='menu-item-has-children'><Link href='/about-us'>Pages</Link>
-            <ul className='sub-menu' style={activeSubMenu("pages")}>
-                <li><Link href='/about-us'>About Us</Link></li>
-                {/* <li><Link href='/pricing-plans'>Price Plans</Link></li> */}
-                <li><Link href='/faq'>FAQ's</Link></li>
-                <li><Link href='/testimonial'>Testimonials</Link></li>
-				<li><Link href='/team-two'>Teams</Link>
-                    {/* <ul className='sub-menu' style={activeSubMenus("team")}>
-						<li><Link href='/team-filter'>Team Filter</Link></li>
-						<li><Link href='/team'>Team 01</Link></li>
-						<li><Link href='/team-two'>Team 02</Link></li>
-						<li><Link href='/team-three'>Team 03</Link></li>
-						<li><Link href='/team/grace-elizabeth'>Team Single</Link></li>
-					</ul>
-                    <a className={`mean-expand ${activeIcons("team")}`} onClick={() => actives("team")}></a> */}
-				</li>
-                <li><Link href='/request-quote'>Request Quote</Link></li>
-       
+        <li><Link href='/' title="Home page">Home</Link></li>
+        <li className='menu-item-has-children'>
+            <Link href='/about-us' title="Pages overview">Pages</Link>
+            <ul className='sub-menu' style={activeSubMenu("pages")}> 
+                <li><Link href='/about-us' title="About Us">About Us</Link></li>
+                <li><Link href='/history' title="Company History">Company History</Link></li>
+                <li><Link href='/services' title="Our Services">Services</Link></li>
+                <li><Link href='/testimonial' title="Testimonials">Testimonials</Link></li>
+                <li><Link href='/faq' title="Frequently Asked Questions">FAQ's</Link></li>
+                <li><Link href='/awards' title="Awards and Recognitions">Awards &amp; Recognitions</Link></li>
+                <li><Link href='/request-quote' title="Request a Quote">Request Quote</Link></li>
             </ul>
             <a className={`mean-expand ${activeIcon("pages")}`} onClick={() => active("pages")}></a>
         </li>
-		<li className='menu-item-has-children'><Link href='/services'>Services</Link>
-            {/* <ul className='sub-menu' style={activeSubMenu("services")}>
-				<li><Link href='/services'>Services 01</Link></li>
-				<li><Link href='/services-two'>Services 02</Link></li>
-				<li><Link href=''>Services Details</Link></li>
-			</ul>
-            <a className={`mean-expand ${activeIcon("services")}`} onClick={() => active("services")}></a> */}
-		</li>
-        <li className='menu-item-has-children'><Link href='/portfolio/3-columns'>Project</Link>
-            {/* <ul className='sub-menu' style={activeSubMenu("project")}>
-				<li><Link href='/portfolio-filter'>Project Filter</Link></li>
-				<li><Link href='/portfolio/2-columns'>Project Grid</Link>
-                    <ul className='sub-menu' style={activeSubMenus("grid")}>
-						<li><Link href='/portfolio/2-columns'>2 Columns</Link></li>
-						<li><Link href='/portfolio/3-columns'>3 Columns</Link></li>
-						<li><Link href='/portfolio/4-columns'>4 Columns</Link></li>
-					</ul>
-                    <a className={`mean-expand ${activeIcons("grid")}`} onClick={() => actives("grid")}></a>
-				</li>
-                <li><Link href='/portfolio/business-analytics'>Project Details</Link></li>
-            </ul> */}
-            {/* <a className={`mean-expand ${activeIcon("project")}`} onClick={() => active("project")}></a> */}
+        <li><Link href='/portfolio/3-columns' title="Portfolio Gallery">Portfolio</Link></li>
+        <li className='menu-item-has-children'>
+            <Link href='/services/tools' title="Construction Tools">Tools</Link>
+            <ul className='sub-menu' style={activeSubMenu("tools")}>
+                <li><Link href='/services/tools/cost-calculator' title="Project Cost Calculator">Cost Calculator</Link></li>
+                <li><Link href='/services/tools/material-calculator' title="Material Calculator">Material Calculator</Link></li>
+                <li><Link href='/services/tools/instant-quote' title="Instant Quote Generator">Instant Quote</Link></li>
+                <li><Link href='/services/tools/timeline-estimator' title="Project Timeline Estimator">Timeline Estimator</Link></li>
+            </ul>
+            <a className={`mean-expand ${activeIcon("tools")}`} onClick={() => active("tools")}></a>
+        </li>
+        <li><Link href='/blog-standard' title="Blog">Blog</Link></li>
+        <li>
+            <Link 
+                href='https://chat.someninigltd.com' 
+                target="_blank" 
+                rel="noopener noreferrer"
+                title="Someni AI Chat (opens in new tab)"
+                aria-label="Someni AI Chat (opens in new tab)"
+            >
+                Someni AI
+            </Link>
         </li>
         <li><Link href='/blog-standard'>Blog</Link>
             {/* <ul className='sub-menu' style={activeSubMenu("blog")}>

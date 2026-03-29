@@ -1,9 +1,10 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import { EffectFade, Autoplay, Navigation} from 'swiper/modules';
 import testimonialData from '../../data/testimonial-data';
+import "../../../public/assets/css/testimonial-equal-box.css";
 
 const slideControl = {
-    spaceBetween: 25,
+    spaceBetween:    25,
     centeredSlides: true,
     speed: 1000,
     loop: true,
@@ -89,23 +90,25 @@ const TestimonialMain = () => {
                 <Swiper modules={[EffectFade, Autoplay, Navigation]} {...slideControl} >
                     {testimonialData?.map((data, id) => (
                         <SwiperSlide key={id}>
-                            <div className="testimonial__one-item">
-                                <div className="testimonial__one-item-client">
-                                    <div className="testimonial__one-item-client-image">
-                                        <img src={data.avatar.src} alt="image" />
+                            <div style={{display: 'flex', height: '100%'}}>
+                                <div className="testimonial__one-item" style={{width: '100%'}}>
+                                    <div className="testimonial__one-item-client">
+                                        <div className="testimonial__one-item-client-image">
+                                            <img src={data.avatar.src} alt="image" />
+                                        </div>
+                                        <div className="testimonial__one-item-client-title">
+                                            <h4>{data.name}</h4>
+                                            <span>{data.position}</span>
+                                        </div>
                                     </div>
-                                    <div className="testimonial__one-item-client-title">
-                                        <h4>{data.name}</h4>
-                                        <span>{data.position}</span>
+                                    <p>{data.des}</p>
+                                    <div className="testimonial__one-item-reviews">
+                                        <i className="flaticon-star"></i>
+                                        <i className="flaticon-star"></i>
+                                        <i className="flaticon-star"></i>
+                                        <i className="flaticon-star"></i>
+                                        <i className="flaticon-star"></i>
                                     </div>
-                                </div>
-                                <p>{data.des}</p>
-                                <div className="testimonial__one-item-reviews">
-                                    <i className="flaticon-star"></i>
-                                    <i className="flaticon-star"></i>
-                                    <i className="flaticon-star"></i>
-                                    <i className="flaticon-star"></i>
-                                    <i className="flaticon-star"></i>
                                 </div>
                             </div>
                         </SwiperSlide>

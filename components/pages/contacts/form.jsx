@@ -22,24 +22,17 @@ const FormArea = () => {
         setIsSubmitting(true);
         setSubmitStatus(null);
 
-        // Map form fields to API fields
-        const payload = {
-            to: "contactsomeni@yahoo.com", // Always send to this address
-            subject: formData.subject || "Contact Form Submission",
-            text: `Name: ${formData.name}\nEmail: ${formData.email}\nMessage: ${formData.message}`,
-            html: `<p><strong>Name:</strong> ${formData.name}</p>
-                   <p><strong>Email:</strong> ${formData.email}</p>
-                   <p><strong>Message:</strong> ${formData.message}</p>`,
-            name: formData.name
-        };
-
         try {
-            const response = await fetch('/api/send-email', {
+            const response = await fetch('/__forms.html', {
                 method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify(payload),
+                headers: { "Content-Type": "application/x-www-form-urlencoded" },
+                body: new URLSearchParams({
+                    'form-name': 'contact',
+                    'name': formData.name,
+                    'email': formData.email,
+                    'subject': formData.subject,
+                    'message': formData.message
+                }).toString()
             });
 
             if (response.ok) {
@@ -57,7 +50,19 @@ const FormArea = () => {
 
     return (
         <>
-            <form onSubmit={handleSubmit}>
+            <form 
+                name="contact" 
+                method="POST" 
+                data-netlify="true" 
+                data-netlify-honeypot="bot-field"
+                onSubmit={handleSubmit}
+            >
+                {/* Hidden fields for Netlify Forms */}
+                <input type="hidden" name="form-name" value="contact" />
+                <p style={{ display: 'none' }}>
+                    <label>Don't fill this out if you're human: <input name="bot-field" /></label>
+                </p>
+                
                 <div className="row">
                     <div className="col-md-6 mb-25">
                         <div className="contact__form-area-item">

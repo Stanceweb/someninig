@@ -1,15 +1,43 @@
-
+"use client";
+import { useState, useEffect } from 'react';
+import { useRouter, useSearchParams } from 'next/navigation';
 import blogData from '@/components/data/blog-data';
 import Link from 'next/link';
 
 const BlogSidebar = () => {
+    const searchParams = useSearchParams();
+    const initialQuery = searchParams?.get('query') || '';
+    const [q, setQ] = useState(initialQuery);
+    const router = useRouter();
+
+    // keep input in sync with URL query param (user may navigate back/forward)
+    useEffect(() => {
+        setQ(searchParams?.get('query') || '');
+    }, [searchParams]);
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        const trimmed = (q || '').trim();
+        if (trimmed) {
+            router.push(`/blog?query=${encodeURIComponent(trimmed)}`);
+        } else {
+            router.push('/blog');
+        }
+    };
+
     return (
         <div className="all__sidebar">
             <div className="all__sidebar-item">
                 <h4>Search Here</h4>
                 <div className="all__sidebar-item-search">
-                    <form action="#">
-                        <input type="text" placeholder="Search....." />
+                    <form onSubmit={handleSubmit}>
+                        <input
+                            type="text"
+                            placeholder="Search....."
+                            value={q}
+                            onChange={(e) => setQ(e.target.value)}
+                            aria-label="Search blog"
+                        />
                         <button type="submit"><i className="fal fa-search"></i></button>
                     </form>
                 </div>

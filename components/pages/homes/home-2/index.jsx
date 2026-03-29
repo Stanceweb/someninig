@@ -27,6 +27,7 @@ const HomeTwo = () => {
             <PortfolioTwo />
             <FaqArea />
             {/* <PricingPlan /> */}
+         
             <TestimonialTwo />
             <BlogTwo />
             <FooterTwo />
