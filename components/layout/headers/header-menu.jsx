@@ -50,7 +50,7 @@ const MainMenu = () => {
                         <li><Link href='/portfolio/healthcare-facility'>Project Details</Link></li>
                     </ul> */}
                 </li>
-                <li><Link href='/blog-standard'>Blog</Link>
+                <li><Link href='https://blog.someninigltd.com'>Blog</Link>
                     {/* <ul className='sub-menu'>
                         <li><Link href='/blog'>Blog Grid</Link></li>
                         <li><Link href='/blog-standard'>Blog Standard</Link></li>
