@@ -3,7 +3,6 @@
 import Link from "next/link";
 import logo from "../../../public/assets/img/logo-2.png";
 import MainMenu from './header-menu';
-import Search from './search';
 import { useRef, useState } from 'react';
 import MobileMenuOne from './menu_sidebar/menu-one';
 import SideBar from './offcanvas';
@@ -11,15 +10,8 @@ import SideBar from './offcanvas';
 const HeaderTwo = () => {
     const [sidebarOpen, setSidebarOpen] = useState(false);
     const [menuSidebar, setMenuSidebar] = useState(false);
-    const [search, setSearch] = useState(false);
-    const searchTriggerRef = useRef(null);
     const sidebarTriggerRef = useRef(null);
     const menuTriggerRef = useRef(null);
-
-    const closeSearch = () => {
-        setSearch(false);
-        searchTriggerRef.current?.focus();
-    };
 
     const closeSidebar = () => {
         setSidebarOpen(false);
@@ -47,20 +39,6 @@ const HeaderTwo = () => {
                             </nav>
                         </div>
                         <div className="header__area-menubar-right">
-                            <div className="header__area-menubar-right-search">
-                                <button
-                                    ref={searchTriggerRef}
-                                    className="header__area-menubar-right-search-icon open"
-                                    type="button"
-                                    aria-label="Open site search"
-                                    aria-expanded={search}
-                                    aria-controls="site-search"
-                                    onClick={() => setSearch(true)}
-                                >
-                                    <i className="fal fa-search" aria-hidden="true"></i>
-                                </button>
-                                <Search isOpen={search} setIsOpen={setSearch} onClose={closeSearch} />
-                            </div>
                             <div className="header__area-menubar-right-btn one">
                                 <Link className="build_button" href="/request-quote">Request a Quote<i className="flaticon-right-up"></i></Link>
                             </div>
