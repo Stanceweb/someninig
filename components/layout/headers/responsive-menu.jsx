@@ -35,7 +35,19 @@ const ResponsiveMenu = ({ onNavigate }) => {
             </ul>
             <button className={`mean-expand ${activeIcon("tools")}`} type="button" aria-label="Toggle Tools submenu" aria-expanded={activeMenu === "tools"} aria-controls="mobile-tools-submenu" onClick={() => active("tools")}></button>
         </li>
-        <li><Link href='/blog-standard' title="Blog" {...linkProps}>Blog</Link></li>
+        <li><Link href='/blog' title="Blog" {...linkProps}>Blog</Link></li>
+        <li>
+            <Link
+                href='https://blog.someninigltd.com/'
+                target="_blank"
+                rel="noopener noreferrer"
+                title="News and Insights (opens in new tab)"
+                aria-label="News and Insights (opens in new tab)"
+                onClick={onNavigate}
+            >
+                News &amp; Insights
+            </Link>
+        </li>
         <li>
             <Link 
                 href='https://chat.someninigltd.com' 

@@ -29,7 +29,18 @@ const MainMenu = () => {
                         <li><Link href='/services/tools/timeline-estimator' title="Project Timeline Estimator">Timeline Estimator</Link></li>
                     </ul>
                 </li>
-                <li><Link href='/blog-standard' title="Blog">Blog</Link></li>
+                <li><Link href='/blog' title="Blog">Blog</Link></li>
+                <li>
+                    <Link
+                        href='https://blog.someninigltd.com/'
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        title="News and Insights (opens in new tab)"
+                        aria-label="News and Insights (opens in new tab)"
+                    >
+                        News &amp; Insights
+                    </Link>
+                </li>
                 <li>
                     {/* External AI chat link */}
                     <Link 
