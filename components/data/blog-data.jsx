@@ -18,7 +18,7 @@ const blogData = [
     },
     {
         number: '02',
-        id: 'someni-safety-standards-in-warri-projects',
+        id: 'someni-safety-standards-in-nigeria',
         date: 'February 20, 2025',
         comment: '5',
         title: 'Someni Nigeria Limited’s Unmatched Safety Standards in Nigeria',
@@ -33,12 +33,12 @@ const blogData = [
         comment: '3',
         title: 'Someni Nigeria Limited’s Expertise in Pipeline Maintenance',
         image: image3,
-        description: 'Explore Someni Nigeria Limited’s proven skills in pipeline maintenance Nigeria, delivering projects like the Warri-Ughelli pipeline with excellence for the Nigeria oil sector.',
+        description: 'Explore Someni Nigeria Limited’s pipeline-maintenance capability, supporting reliable operations and safe project delivery across Nigeria’s oil and gas sector.',
         delay: '1',
     },
     {
         number: '04',
-        id: 'someni-manpower-solutions-in-warri',
+        id: 'someni-manpower-solutions-for-oil-fields',
         date: 'April 25, 2025',
         comment: '6',
         title: 'Someni Nigeria Limited’s Manpower Solutions for Oil Fields',

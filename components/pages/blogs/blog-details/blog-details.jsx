@@ -22,16 +22,16 @@ const BlogSingleMain = ({ singleData }) => {
                                 <img src={singleData.image.src} alt="image" />
                                 <h3 className="mt-25 mb-20">{singleData.title}</h3>
                                 <p>{singleData.description}</p>
-                                <p>Someni Nigeria Limited excels in community relations management for oil and gas projects in Delta State, fostering positive stakeholder engagement and sustainable operations through our CASHES policy. With a 28-year partnership with DAEWOO Nigeria Ltd., we handle community affairs across over 50 projects in Delta and Rivers States, ensuring seamless project execution and long-term goodwill.</p>
+                                <p>Someni Nigeria Limited supports oil and gas and allied-industry projects across Nigeria. Headquartered in Delta State, the company combines engineering capability, specialist personnel and practical project coordination to help clients deliver work safely and effectively in different operating environments.</p>
                                 <div className="blog__details-area-box">
                                     <i className="fas fa-quote-right"></i>
                                     <div>
-                                        <h6>Someni’s community relations expertise has been instrumental in building trust and minimizing disruptions in host communities for our oil projects.</h6>                                
-                                        <span>Project Manager, DAEWOO Nigeria Ltd.</span>
+                                        <h6>Someni’s approach brings together technical delivery, stakeholder engagement and safety-focused coordination for projects across Nigeria.</h6>                                
+                                        <span>Someni Nigeria Limited</span>
                                     </div>
                                 </div>
-                                <h4 className="mb-20">Fostering Sustainable Community Partnerships in Nigeria's Oil Sector</h4>
-                                <p>In Delta State's oil-rich regions, Someni Nigeria Limited manages community relations for major infrastructure projects, including pipeline laying and flow station construction. Our integrated CASHES approach prioritizes community affairs, health, safety, environment, and security, aligning with client standards to prevent conflicts and promote mutual benefits in onshore operations.</p>
+                                <h4 className="mb-20">Supporting Projects Across Nigeria</h4>
+                                <p>From planning through mobilisation and execution, Someni adapts its services to the technical, safety, community and operational requirements of each project. This helps clients deliver infrastructure, oil field and specialist-services work with a clear focus on responsible performance.</p>
                                 <div className="row mt-40 mb-40 blog__details-area-image">
                                     <div className="col-sm-6 sm-mb-25">
                                         <img src={image1.src} alt="image" />
@@ -40,7 +40,7 @@ const BlogSingleMain = ({ singleData }) => {
                                         <img src={image2.src} alt="image" />
                                     </div>
                                 </div>
-                                <p>Someni Nigeria Limited delivers comprehensive community relations management in Nigeria's oil and gas sector, leveraging decades of experience in stakeholder consultations and conflict resolution. Our proactive strategies ensure smooth execution of onshore pipeline projects and manpower deployment, as evidenced in our collaborations with SPDC and Chevron since 1993.</p>
+                                <p>Someni Nigeria Limited delivers engineering, oil field support, manpower and stakeholder-engagement services for clients across Nigeria. Its nationwide perspective is supported by local understanding, capable people and a commitment to safe, dependable project delivery.</p>
                                 <div className="blog__details-area-tag">
                                     <h5>Related Tags :</h5>
                                     <div className="all__sidebar-item-tag">
@@ -57,7 +57,7 @@ const BlogSingleMain = ({ singleData }) => {
                                     </div>
                                     <div className="blog__details-area-author-content">
                                         <h5>Joshua Okon</h5>
-                                        <p>Effective community relations management in Delta State demands cultural insight and strategic engagement, core strengths of Someni Nigeria Limited in Nigeria's energy sector.</p>
+                                        <p>Someni Nigeria Limited supports responsible project delivery across Nigeria’s energy and industrial sectors.</p>
                                         <div className="social__icon">
                                             <Social />
                                         </div>
@@ -73,7 +73,7 @@ const BlogSingleMain = ({ singleData }) => {
                                             <div className="blog__details-area-comment-item-comment-content">
                                                 <h5>Chinedu Eze<Link href="#"><i className="far fa-reply-all"></i>Reply</Link></h5>
                                                 <span>June 10, 2025  At 3:PM</span>
-                                                <p>Excellent overview of community engagement—Someni’s approach is a model for oil projects in Delta State!</p>
+                                                <p>Excellent overview of the planning and engagement needed for responsible oil and gas projects across Nigeria.</p>
                                             </div>
                                         </div>
                                     </div>
