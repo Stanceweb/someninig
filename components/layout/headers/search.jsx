@@ -1,11 +1,15 @@
 "use client";
-import React, { useState, useEffect } from 'react';
+import React, { useCallback, useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 
-const Search = ({ isOpen, setIsOpen, onSearch }) => {
+const Search = ({ isOpen, setIsOpen, onSearch, onClose }) => {
 	// controlled input for the search query
 	const [query, setQuery] = useState('');
 	const router = useRouter();
+	const closeSearch = useCallback(() => {
+		setIsOpen(false);
+		onClose?.();
+	}, [onClose, setIsOpen]);
 
 	useEffect(() => {
 		// clear query when opened/closed
@@ -15,11 +19,11 @@ const Search = ({ isOpen, setIsOpen, onSearch }) => {
 	useEffect(() => {
 		// close on ESC
 		const onKey = (e) => {
-			if (e.key === 'Escape' && isOpen) setIsOpen(false);
+		if (e.key === 'Escape' && isOpen) closeSearch();
 		};
 		if (isOpen) window.addEventListener('keydown', onKey);
 		return () => window.removeEventListener('keydown', onKey);
-	}, [isOpen, setIsOpen]);
+	}, [closeSearch, isOpen]);
 
 	const handleSubmit = (e) => {
 		e.preventDefault();
@@ -38,13 +42,13 @@ const Search = ({ isOpen, setIsOpen, onSearch }) => {
 			}
 		}
 
-		setIsOpen(false);
+		closeSearch();
 		setQuery('');
 	};
 
 	return (
 		<>
-			<div className={`header__area-menubar-right-search-box ${isOpen ? 'active' : ''}`}>
+			<div id="site-search" className={`header__area-menubar-right-search-box ${isOpen ? 'active' : ''}`} role="dialog" aria-modal="true" aria-label="Site search">
 				<form onSubmit={handleSubmit}>
 					<input
 						type="search"
@@ -57,11 +61,11 @@ const Search = ({ isOpen, setIsOpen, onSearch }) => {
 				</form>
 				<span
 					className="header__area-menubar-right-search-box-icon"
-					onClick={() => { setIsOpen(false); setQuery(''); }}
+					onClick={() => { closeSearch(); setQuery(''); }}
 					role="button"
 					tabIndex={0}
 					aria-label="Close search"
-					onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') { setIsOpen(false); setQuery(''); } }}
+					onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') { closeSearch(); setQuery(''); } }}
 				>
 					<i className="fal fa-times" />
 				</span>

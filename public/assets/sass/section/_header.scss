@@ -46,6 +46,11 @@
                                 visibility: visible;
                             }
                         }
+                        &:focus-within > .sub-menu {
+                            transform: translateY(0);
+                            opacity: 1;
+                            visibility: visible;
+                        }
                         .sub-menu {
                             position: absolute;
                             background: var(--color-8);
@@ -413,6 +418,16 @@
         width: 100%;
         z-index: 99;
         border-color: #FFFFFF21;
+        &::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.6);
+        }
+        > .custom_container {
+            position: relative;
+            z-index: 1;
+        }
         .menu__bar i,
         .header__area-menubar-right-search-icon i,
         .header__area-menubar-center-menu ul li.menu-item-has-children > a::before,
@@ -508,6 +523,8 @@
 * Menu Sidebar CSS
 ==========================================================================*/
 .sidebar-overlay {
+	border: 0;
+	padding: 0;
 	position: fixed;
 	top: 0;
 	right: 0;
@@ -541,9 +558,14 @@ Responsive Menu Css
 	.mean-nav {
         background: var(--color-1);
         margin: 0;
-		ul li a {
+		ul li a,
+        ul li .mean-expand {
             transition: 0.4s;
-            &.mean-expand {
+			&.mean-expand {
+				position: absolute;
+				right: 0;
+				top: 0;
+				cursor: pointer;
                 background: var(--color-7);
                 border: 0 !important;
                 font-size: 0px !important;
@@ -599,6 +621,9 @@ Responsive Menu Css
 .mean-container .mean-nav > ul {
 	display: block !important;
 }
+.mean-container .mean-nav ul li {
+    position: relative;
+}
 .mean-container .mean-bar {
 	padding: 0;
 	border-bottom: 1px solid var(--color-11);
@@ -622,6 +647,11 @@ Responsive Menu Css
         font-size: 35px;
         cursor: pointer;
         color: var(--text-heading-color);
+    }
+    &-trigger {
+        border: 0;
+        padding: 0;
+        background: transparent;
     }
     &-popup {
         display: none;
@@ -662,6 +692,9 @@ Responsive Menu Css
                 max-width: 170px;
             }
             .close {
+				border: 0;
+				padding: 0;
+				background: transparent;
                 i {
                     background: var(--primary-color-1);
                     width: 40px;
@@ -679,7 +712,13 @@ Responsive Menu Css
                 }
             }
         }
+        &-cta {
+            display: inline-flex;
+            margin-top: 30px;
+        }
         &-overlay {
+			border: 0;
+			padding: 0;
             position: fixed;
             top: 0;
             left: 0;
@@ -696,6 +735,18 @@ Responsive Menu Css
                 width: 100%;
             }            
         }
+    }
+}
+
+.header__area-menubar-right-search-icon,
+.header__area-menubar-right-sidebar-icon,
+.menu__bar-trigger,
+.sidebar-close-btn,
+.menu__bar-popup-close,
+.mean-expand {
+    &:focus-visible {
+        outline: 3px solid var(--primary-color-1);
+        outline-offset: 3px;
     }
 }
 @media (max-width: 1550px) {

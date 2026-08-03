@@ -2,47 +2,40 @@
 import Link from "next/link";
 import React, { useState } from 'react';
 
-const ResponsiveMenu = () => {
+const ResponsiveMenu = ({ onNavigate }) => {
     const [activeMenu, setActiveMenu] = useState(null);
-    const active = (value) => setActiveMenu(value === activeMenu ? null : value),
-    activeIcon = (value) => (activeMenu == value ? "mean-clicked" : ""),
-    activeSubMenu = (value) =>
-    value == activeMenu ? { display: "block" } : { display: "none" };
-
-    const [activeMenus, setActiveMenus] = useState(null);
-    const actives = (value) => setActiveMenus(value === activeMenus ? null : value),
-    activeIcons = (value) => (activeMenus == value ? "mean-clicked" : ""),
-    activeSubMenus = (value) =>
-    value == activeMenus ? { display: "block" } : { display: "none" };
+    const active = (value) => setActiveMenu(value === activeMenu ? null : value);
+    const activeIcon = (value) => (activeMenu === value ? "mean-clicked" : "");
+    const activeSubMenu = (value) => activeMenu === value ? { display: "block" } : { display: "none" };
+    const linkProps = { onClick: onNavigate };
   return (
     <>    
     <ul>
-        <li><Link href='/' title="Home page">Home</Link></li>
+        <li><Link href='/' title="Home page" {...linkProps}>Home</Link></li>
         <li className='menu-item-has-children'>
-            <Link href='/about-us' title="Pages overview">Pages</Link>
-            <ul className='sub-menu' style={activeSubMenu("pages")}> 
-                <li><Link href='/about-us' title="About Us">About Us</Link></li>
-                <li><Link href='/history' title="Company History">Company History</Link></li>
-                <li><Link href='/services' title="Our Services">Services</Link></li>
-                <li><Link href='/testimonial' title="Testimonials">Testimonials</Link></li>
-                <li><Link href='/faq' title="Frequently Asked Questions">FAQ's</Link></li>
-                <li><Link href='/awards' title="Awards and Recognitions">Awards &amp; Recognitions</Link></li>
-                <li><Link href='/request-quote' title="Request a Quote">Request Quote</Link></li>
+            <Link href='/about-us' title="Pages overview" {...linkProps}>Pages</Link>
+            <ul id="mobile-pages-submenu" className='sub-menu' style={activeSubMenu("pages")}>
+                <li><Link href='/about-us' title="About Us" {...linkProps}>About Us</Link></li>
+                <li><Link href='/history' title="Company History" {...linkProps}>Company History</Link></li>
+                <li><Link href='/services' title="Our Services" {...linkProps}>Services</Link></li>
+                <li><Link href='/testimonial' title="Testimonials" {...linkProps}>Testimonials</Link></li>
+                <li><Link href='/faq' title="Frequently Asked Questions" {...linkProps}>FAQ's</Link></li>
+                <li><Link href='/awards' title="Awards and Recognitions" {...linkProps}>Awards &amp; Recognitions</Link></li>
             </ul>
-            <a className={`mean-expand ${activeIcon("pages")}`} onClick={() => active("pages")}></a>
+            <button className={`mean-expand ${activeIcon("pages")}`} type="button" aria-label="Toggle Pages submenu" aria-expanded={activeMenu === "pages"} aria-controls="mobile-pages-submenu" onClick={() => active("pages")}></button>
         </li>
-        <li><Link href='/portfolio/3-columns' title="Portfolio Gallery">Portfolio</Link></li>
+        <li><Link href='/portfolio/3-columns' title="Portfolio Gallery" {...linkProps}>Portfolio</Link></li>
         <li className='menu-item-has-children'>
-            <Link href='/services/tools' title="Construction Tools">Tools</Link>
-            <ul className='sub-menu' style={activeSubMenu("tools")}>
-                <li><Link href='/services/tools/cost-calculator' title="Project Cost Calculator">Cost Calculator</Link></li>
-                <li><Link href='/services/tools/material-calculator' title="Material Calculator">Material Calculator</Link></li>
-                <li><Link href='/services/tools/instant-quote' title="Instant Quote Generator">Instant Quote</Link></li>
-                <li><Link href='/services/tools/timeline-estimator' title="Project Timeline Estimator">Timeline Estimator</Link></li>
+            <Link href='/services/tools' title="Construction Tools" {...linkProps}>Tools</Link>
+            <ul id="mobile-tools-submenu" className='sub-menu' style={activeSubMenu("tools")}>
+                <li><Link href='/services/tools/cost-calculator' title="Project Cost Calculator" {...linkProps}>Cost Calculator</Link></li>
+                <li><Link href='/services/tools/material-calculator' title="Material Calculator" {...linkProps}>Material Calculator</Link></li>
+                <li><Link href='/services/tools/instant-quote' title="Instant Quote Generator" {...linkProps}>Instant Quote</Link></li>
+                <li><Link href='/services/tools/timeline-estimator' title="Project Timeline Estimator" {...linkProps}>Timeline Estimator</Link></li>
             </ul>
-            <a className={`mean-expand ${activeIcon("tools")}`} onClick={() => active("tools")}></a>
+            <button className={`mean-expand ${activeIcon("tools")}`} type="button" aria-label="Toggle Tools submenu" aria-expanded={activeMenu === "tools"} aria-controls="mobile-tools-submenu" onClick={() => active("tools")}></button>
         </li>
-        <li><Link href='/blog-standard' title="Blog">Blog</Link></li>
+        <li><Link href='/blog-standard' title="Blog" {...linkProps}>Blog</Link></li>
         <li>
             <Link 
                 href='https://chat.someninigltd.com' 
@@ -50,27 +43,12 @@ const ResponsiveMenu = () => {
                 rel="noopener noreferrer"
                 title="Someni AI Chat (opens in new tab)"
                 aria-label="Someni AI Chat (opens in new tab)"
+                onClick={onNavigate}
             >
                 Someni AI
             </Link>
         </li>
-        <li><Link href='/blog-standard'>Blog</Link>
-            {/* <ul className='sub-menu' style={activeSubMenu("blog")}>
-                <li><Link href='/blog'>Blog Grid</Link></li>
-                <li><Link href='/blog-standard'>Blog Standard</Link></li>
-                <li><Link href='/blog/revamp-your-business-with-expert-consulting'>Blog Details</Link></li>
-            </ul>
-            <a className={`mean-expand ${activeIcon("blog")}`} onClick={() => active("blog")}></a> */}
-        </li>
-        <li><Link href='/contact-us'>Contact</Link>
-            {/* <ul className='sub-menu' style={activeSubMenu("contact")}>
-                <li><Link href='/contact'>Contact Style 01</Link></li>
-                <li><Link href='/contact-two'>Contact Style 02</Link></li>
-                <li><Link href='/contact-three'>Contact Style 03</Link></li>
-                <li><Link href='/contact-four'>Contact Style 04</Link></li>
-            </ul>
-            <a className={`mean-expand ${activeIcon("contact")}`} onClick={() => active("contact")}></a> */}
-        </li>      
+        <li><Link href='/contact-us' {...linkProps}>Contact</Link></li>
     </ul>  
     </>
   );

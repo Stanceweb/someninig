@@ -1,8 +1,10 @@
+"use client";
+
 import Link from "next/link";
 import logo from "../../../public/assets/img/logo-2.png";
 import MainMenu from './header-menu';
 import Search from './search';
-import { useState } from 'react';
+import { useRef, useState } from 'react';
 import MobileMenuOne from './menu_sidebar/menu-one';
 import SideBar from './offcanvas';
 
@@ -10,45 +12,86 @@ const HeaderTwo = () => {
     const [sidebarOpen, setSidebarOpen] = useState(false);
     const [menuSidebar, setMenuSidebar] = useState(false);
     const [search, setSearch] = useState(false);
+    const searchTriggerRef = useRef(null);
+    const sidebarTriggerRef = useRef(null);
+    const menuTriggerRef = useRef(null);
+
+    const closeSearch = () => {
+        setSearch(false);
+        searchTriggerRef.current?.focus();
+    };
+
+    const closeSidebar = () => {
+        setSidebarOpen(false);
+        sidebarTriggerRef.current?.focus();
+    };
+
+    const closeMenu = () => {
+        setMenuSidebar(false);
+        menuTriggerRef.current?.focus();
+    };
+
     return (
         <>
-            <div className="header__area two">
+            <header className="header__area two">
                 <div className="custom_container">
                     <div className="header__area-menubar">
                         <div className="header__area-menubar-left one">
                             <div className="header__area-menubar-left-logo">
-                                <Link href='/'><img className='one' src={logo.src} alt='logo'/></Link>
+                                <Link href='/'><img className='one' src={logo.src} alt='Someni Nigeria Limited' /></Link>
                             </div>
                         </div>
                         <div className="header__area-menubar-center">
-                            <div className="header__area-menubar-center-menu">
+                            <nav className="header__area-menubar-center-menu" aria-label="Primary navigation">
                                 <MainMenu />
-                            </div>
+                            </nav>
                         </div>
                         <div className="header__area-menubar-right">
                             <div className="header__area-menubar-right-search">
-                                <div className="search">	
-                                    <span className="header__area-menubar-right-search-icon open" onClick={() => setSearch(true)}><i className="fal fa-search"></i></span>
-                                </div>
-                                <Search isOpen={search} setIsOpen={setSearch} />
+                                <button
+                                    ref={searchTriggerRef}
+                                    className="header__area-menubar-right-search-icon open"
+                                    type="button"
+                                    aria-label="Open site search"
+                                    aria-expanded={search}
+                                    aria-controls="site-search"
+                                    onClick={() => setSearch(true)}
+                                >
+                                    <i className="fal fa-search" aria-hidden="true"></i>
+                                </button>
+                                <Search isOpen={search} setIsOpen={setSearch} onClose={closeSearch} />
                             </div>
                             <div className="header__area-menubar-right-btn one">
                                 <Link className="build_button" href="/request-quote">Request a Quote<i className="flaticon-right-up"></i></Link>
                             </div>
                             <div className="header__area-menubar-right-sidebar">
-                                <div className="header__area-menubar-right-sidebar-icon" onClick={() => setSidebarOpen(true)}>
-                                    <i className="flaticon-menu-6"></i>
-                                </div>
+                                <button
+                                    ref={sidebarTriggerRef}
+                                    className="header__area-menubar-right-sidebar-icon"
+                                    type="button"
+                                    aria-label="Open company contact details"
+                                    aria-expanded={sidebarOpen}
+                                    aria-controls="company-contact-panel"
+                                    onClick={() => setSidebarOpen(true)}
+                                ><i className="flaticon-menu-6" aria-hidden="true"></i></button>
                             </div>
                             <div className="header__area-menubar-right-responsive-menu menu__bar">
-                                <i className="flaticon-menu-3" onClick={() => setMenuSidebar(true)}></i>
+                                <button
+                                    ref={menuTriggerRef}
+                                    className="menu__bar-trigger"
+                                    type="button"
+                                    aria-label="Open navigation menu"
+                                    aria-expanded={menuSidebar}
+                                    aria-controls="mobile-navigation"
+                                    onClick={() => setMenuSidebar(true)}
+                                ><i className="flaticon-menu-3" aria-hidden="true"></i></button>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <SideBar isOpen={sidebarOpen} setIsOpen={setSidebarOpen} />
-            <MobileMenuOne isOpen={menuSidebar} setIsOpen={setMenuSidebar} />
+            </header>
+            <SideBar isOpen={sidebarOpen} setIsOpen={setSidebarOpen} onClose={closeSidebar} />
+            <MobileMenuOne isOpen={menuSidebar} setIsOpen={setMenuSidebar} onClose={closeMenu} />
         </>
     );
 };
