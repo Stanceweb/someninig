@@ -7,6 +7,15 @@ const ServicesMain = () => {
         <div className="services__page section-padding-three">
             <div className="container">
                 <div className="row">
+                    <div className="col-lg-8">
+                        <div className="title mb-35">
+                            <span className="subtitle">Nationwide Project Delivery</span>
+                            <h2>Engineering and Specialist Services Across Nigeria</h2>
+                            <p>From our headquarters in Effurun, Delta State, we support oil and gas, industrial, civil and manpower requirements for clients across Nigeria.</p>
+                        </div>
+                    </div>
+                </div>
+                <div className="row">
                     {servicesData?.map((data, id) => (
                         <div className="col-lg-4 col-md-6 mt-25" key={id}>
                             <div className="services__one-item">

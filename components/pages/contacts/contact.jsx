@@ -13,7 +13,7 @@ const ContactMain = () => {
                                 <div className="title">
                                     <span className="subtitle wow fadeInLeft" data-wow-delay=".4s">Contact Us</span>
                                     <h2 className="title_split_anim mb-25">Get In Touch for Oil and Gas Engineering Services in Nigeria</h2>
-                                    <p className="wow fadeInUp" data-wow-delay=".4s">We’re here to assist with your engineering projects! Reach out for inquiries on oil field construction, pipeline installation, civil works, or manpower supply in Delta State and across Nigeria.</p>
+                                    <p className="wow fadeInUp" data-wow-delay=".4s">Headquartered in Effurun, we support engineering projects across Nigeria. Contact us about oil field construction, pipeline installation, civil works or manpower supply.</p>
                                 </div>
                                 <div className="contact__area-left-contact wow fadeInUp" data-wow-delay=".7s">
                                     <div className="contact__area-left-contact-item">
@@ -39,8 +39,8 @@ const ContactMain = () => {
                                             <i className="flaticon-location-1"></i>
                                         </div>
                                         <div className="contact__area-left-contact-item-content">
-                                            <span>Location:</span>
-                                            <h6><Link href="https://maps.app.goo.gl/CDYMLqBjQcsLbicc6" target="_blank">NO 49, Uti Street, Off PTI Road, Effurun, Delta State</Link></h6>
+                                            <span>Head Office:</span>
+                                            <h6><Link href="https://maps.app.goo.gl/CDYMLqBjQcsLbicc6" target="_blank">No. 62 Uti Road, Off PTI Road, Effurun, Delta State, Nigeria</Link></h6>
                                         </div>
                                     </div>
                                 </div>

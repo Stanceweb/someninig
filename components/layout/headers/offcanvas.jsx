@@ -56,7 +56,7 @@ const SideBar = ({ isOpen, setIsOpen, onClose }) => {
                     <img src={logo2.src} alt="Someni Nigeria Limited logo" />
                 </Link>
                 </div>
-                <p>Providing engineering and specialist services for Nigeria's oil and gas sector and allied industries with innovative solutions, focusing on technology, safety, environmental impact, and cost efficiency.</p>
+                <p>Headquartered in Effurun, Delta State, Someni Nigeria Limited delivers engineering and specialist services for oil and gas and allied industries across Nigeria.</p>
                 <div className="header__area-menubar-right-sidebar-popup-contact">
                     <h4 className="mb-30">Address</h4>
                     <div className="header__area-menubar-right-sidebar-popup-contact-item">
@@ -82,8 +82,8 @@ const SideBar = ({ isOpen, setIsOpen, onClose }) => {
                             <i className="flaticon-location-1"></i>
                         </div>
                         <div className="header__area-menubar-right-sidebar-popup-contact-item-content">
-                            <span>Location:</span>
-                            <h6><Link href="https://maps.app.goo.gl/CDYMLqBjQcsLbicc6" target="_blank">NO 49, Uti Street, Off PTI Road, Effurun, Delta State</Link></h6>
+                            <span>Head Office:</span>
+                            <h6><Link href="https://maps.app.goo.gl/CDYMLqBjQcsLbicc6" target="_blank">No. 62 Uti Road, Off PTI Road, Effurun, Delta State, Nigeria</Link></h6>
                         </div>
                     </div>
                 </div>

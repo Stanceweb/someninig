@@ -33,7 +33,7 @@ const FooterTwo = () => {
                             <div className="footer__two-widget">
                                 <div className="footer__two-widget-about">
                                     <Link href="/"><img src={logo.src} alt="Someni Nigeria Limited logo" /></Link>
-                                    <p>Someni Nigeria Limited provides engineering and specialist services for Nigeria's oil and gas sector and allied industries. We deliver innovative solutions with a focus on technology, safety, environmental impact, and cost efficiency.</p>
+                                    <p>Headquartered in Effurun, Delta State, Someni Nigeria Limited delivers engineering and specialist services for oil and gas and allied industries across Nigeria. We combine capable people, safe delivery and practical project coordination.</p>
                                     <div className="footer__two-widget-about-social">
                                         <Social />
                                     </div>							
@@ -42,14 +42,14 @@ const FooterTwo = () => {
                         </div>
                         <div className="col-xl-4 col-lg-4 col-md-6 md-mt-30">
                             <div className="footer__two-widget footer-border pl-60 md-pl-0">
-                                <h4>Head Office</h4>
+                                <h4>Head Office — Effurun, Delta State</h4>
                                 <div className="footer__two-widget-location">
                                     <div className="footer__two-widget-location-item">
                                         <div className="footer__two-widget-location-item-icon">
                                             <i className="flaticon-location"></i>
                                         </div>
                                         <div className="footer__two-widget-location-item-info">
-                                            <Link href="https://maps.app.goo.gl/CDYMLqBjQcsLbicc6">NO 49, Uti Street, Off PTI Road, Effurun, Delta State</Link>
+                                            <Link href="https://maps.app.goo.gl/CDYMLqBjQcsLbicc6">No. 62 Uti Road, Off PTI Road, Effurun, Delta State, Nigeria</Link>
                                         </div>
                                     </div>
                                     <div className="footer__two-widget-location-item">

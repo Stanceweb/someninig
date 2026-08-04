@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 
-const SEO = ({ pageTitle, description = "Someni Nigeria Limited provides engineering and specialist services for Nigeria's oil and gas sector and allied industries.", url = "https://www.someninig.com", image = "/assets/img/logo-2.png" }) => {
+const SEO = ({ pageTitle, description = "Headquartered in Effurun, Someni Nigeria Limited delivers engineering and specialist services for oil and gas and allied industries across Nigeria.", url = "https://www.someninig.com", image = "/assets/img/logo-2.png" }) => {
   useEffect(() => {
     document.title = pageTitle + " - Someni Nigeria Limited";
     // Set meta description

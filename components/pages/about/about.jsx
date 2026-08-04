@@ -53,13 +53,13 @@ const AboutMain = () => {
                             <div className="about__five-right ml-70 xl-ml-0">
                                 <div className="about__five-right-title">
                                     <span className="subtitle wow fadeInLeft" data-wow-delay=".4s">About Our Company</span>
-                                    <h2 className="title_split_anim">Trusted Partner in Construction and Design</h2>
+                                    <h2 className="title_split_anim">A Nigerian Engineering Partner with Nationwide Reach</h2>
                                 </div>
                                 <div className="features wow fadeInUp" data-wow-delay=".3s" style={{backgroundImage: `url(${bgImage.src})`}}>
                                     <h3>Building Trust<br/>Over Decades of Expertise</h3>
                                 </div>
                                 <p className="wow fadeInUp" data-wow-delay=".6s">
-                                    At Someni Nigeria Limited, our journey began with a passion for excellence, evolving from a local enterprise into a leading provider of construction expertise and design innovation. We specialize in delivering client-focused solutions for residential, commercial, and industrial projects, integrating sustainable development practices and cutting-edge technology. Our commitment to quality craftsmanship and community impact has earned us a reputation as a trusted partner across Nigeria and beyond.
+                                    Headquartered in Effurun, Delta State, Someni Nigeria Limited supports projects across Nigeria with engineering, oil field support, manpower and community-relations services. We bring local understanding, capable people and practical project coordination to every assignment—helping clients deliver work safely, efficiently and responsibly.
                                 </p>
                                 <div className="item_bounce">
                                     <Link className="build_button mt-20" href="/gallery">See Projects<i className="flaticon-right-up"></i></Link>

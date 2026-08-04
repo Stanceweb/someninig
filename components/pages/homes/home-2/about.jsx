@@ -10,9 +10,9 @@ const AboutTwo = () => {
                     <div className="col-xl-5 col-lg-6 lg-mb-25">
                         <div className="about__two-left section-padding pb-0">
                             <span className="subtitle wow fadeInLeft" data-wow-delay=".4s">About Someni Nigeria Limited</span>
-                            <h2 className="wow fadeInRight" data-wow-delay=".6s">Shaping the Future of Construction</h2>
+                            <h2 className="wow fadeInRight" data-wow-delay=".6s">Engineering Delivery with Nationwide Reach</h2>
                             <p className="wow fadeInUp" data-wow-delay=".4s">
-                                At Someni Nigeria Limited, we are dedicated to revolutionizing the construction industry with innovative construction solutions, state-of-the-art technology, and sustainable building practices. Our highly skilled team of experts delivers exceptional craftsmanship, prioritizing safety, environmental stewardship, and client satisfaction in every project. With a proven track record of creating durable, high-quality structures, we set the standard for excellence in the construction sector across Nigeria and beyond.
+                                Headquartered in Effurun, Delta State, Someni Nigeria Limited delivers engineering and specialist services for oil and gas, industrial and civil projects across Nigeria. Our teams combine practical field experience with disciplined planning, safety and quality control to help clients deliver complex work with confidence.
                             </p>
                             <div className="wow fadeInDown" data-wow-delay="1.2s">
                                 <Link className="build_button mt-35" href="/about-us">All Services<i className="flaticon-right-up"></i></Link>                        

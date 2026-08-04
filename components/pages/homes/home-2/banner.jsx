@@ -34,10 +34,10 @@ const BannerTwo = () => {
 							<div className="row align-items-center">
 								<div className="col-xl-12">
 									<div className="banner__two-content">
-										<span className="subtitle">Best Construction</span>
-										<h2>Delivering Quality</h2>
-										<h1>Projects</h1>
-										<Link className="build_button" href="/about-us">Discover More<i className="flaticon-right-up"></i></Link>
+										<span className="subtitle">Headquartered in Effurun · Delivering Across Nigeria</span>
+										<h2>Engineering Excellence</h2>
+										<h1>Across Nigeria</h1>
+										<Link className="build_button" href="/about-us">Explore Our Capabilities<i className="flaticon-right-up"></i></Link>
 									</div>
 								</div>
 							</div>
@@ -100,7 +100,7 @@ const BannerTwo = () => {
 									>
 										<SwiperSlide className='banner__two-slide-area-thumb-item'>
 											<img src={banner1.src} alt="banner" />
-											<h6>Delivering Quality Projects</h6>
+										<h6>Engineering Excellence Across Nigeria</h6>
 										</SwiperSlide>
 										<SwiperSlide className='banner__two-slide-area-thumb-item'>
 											<img src={banner2.src} alt="banner" />

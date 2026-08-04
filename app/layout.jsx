@@ -3,7 +3,7 @@ import ClientProviders from "@/components/layout/ClientProviders";
 
 export const metadata = {
     title: "Someni Nigeria Limited",
-    description: "Leading construction and engineering solutions in Nigeria.",
+    description: "Someni Nigeria Limited is headquartered in Effurun and delivers engineering and specialist projects across Nigeria.",
     icons: {
         icon: "/favicon.ico",
     },
