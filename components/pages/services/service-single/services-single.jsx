@@ -1,11 +1,9 @@
 import React from 'react';
 import Link from "next/link";
-import ctaImage from '../../../../public/assets/img/page/cta-1.jpg';
-import image1 from '../../../../public/assets/img/portfolio/portfolio-5.jpg';
-import image2 from '../../../../public/assets/img/portfolio/portfolio-8.jpg';
 import servicesData from '@/components/data/services-data';
 
 const ServicesSingleMain = ({singleData}) => {
+    const [firstSupportingImage, secondSupportingImage] = singleData.supportingImages;
     return (
         <>
             <div className="services__details section-padding">
@@ -23,7 +21,7 @@ const ServicesSingleMain = ({singleData}) => {
                                         </ul>
                                     </div>
                                 </div>
-                                <div className="all__sidebar-item-help mb-25" style={{backgroundImage: `url(${ctaImage.src})`}}>
+                                <div className="all__sidebar-item-help mb-25" style={{backgroundImage: `url(${firstSupportingImage.image.src})`}}>
                                     <h3>Ready for Your Next Construction?</h3>
                                     <Link className="build_button mt-20" href="/contact-us">Get an Advice<i className="flaticon-right-up"></i></Link>
                                 </div>
@@ -40,16 +38,16 @@ const ServicesSingleMain = ({singleData}) => {
                         </div>
                         <div className="col-lg-8">
                             <div className="services__details-area">
-                                <img src={singleData.image.src} alt="image" className="mb-30 rounded shadow-sm w-100" />
+                                <img src={singleData.image.src} alt={singleData.imageAlt} className="mb-30 rounded shadow-sm w-100" />
                                 <div className="service-details-section bg-light p-4 rounded mb-40 border">
                                     {singleData.detailsSection}
                                 </div>
                                 <div className="row mt-40 mb-40">
                                     <div className="col-sm-6 sm-mb-25">
-                                        <img className="img_full rounded shadow-sm" src={image1.src} alt="image" />
+                                        <img className="img_full rounded shadow-sm" src={firstSupportingImage.image.src} alt={firstSupportingImage.alt} />
                                     </div>
                                     <div className="col-sm-6">
-                                        <img className="img_full rounded shadow-sm" src={image2.src} alt="image" />
+                                        <img className="img_full rounded shadow-sm" src={secondSupportingImage.image.src} alt={secondSupportingImage.alt} />
                                     </div>
                                 </div>
                                 <p className="mb-20">We deliver exceptional construction services backed by years of experience. Our skilled team prioritizes quality, transparency, and client satisfaction. We utilize innovative techniques and sustainable practices, ensuring timely project completion. Trust us to bring your to life with unmatched craftsmanship</p>

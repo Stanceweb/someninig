@@ -1,11 +1,12 @@
-import image1 from "../../public/assets/img/service/services-1.jpg";
-import image2 from "../../public/assets/img/service/services-2.jpg";
-import image3 from "../../public/assets/img/service/services-3.jpg";
-import image4 from "../../public/assets/img/service/services-4.jpg";
-import image5 from "../../public/assets/img/service/services-5.jpg";
-import image6 from "../../public/assets/img/service/services-6.jpg";
-
-const serviceImages = [image1, image2, image3, image4, image5, image6];
+import oilFieldPipelineCrew from "../../public/assets/img/service/someni/oil-field-pipeline-crew.jpg";
+import oilFieldFabrication from "../../public/assets/img/service/someni/oil-field-fabrication.jpg";
+import oilFieldWelding from "../../public/assets/img/service/someni/oil-field-welding.jpg";
+import constructionClassroomComplex from "../../public/assets/img/service/someni/construction-classroom-complex.jpg";
+import constructionAsphaltRoad from "../../public/assets/img/service/someni/construction-asphalt-road.jpg";
+import constructionSteelWorkshop from "../../public/assets/img/service/someni/construction-steel-workshop.jpg";
+import manpowerFieldCrew from "../../public/assets/img/service/someni/manpower-field-crew.jpg";
+import manpowerSiteCrew from "../../public/assets/img/service/someni/manpower-site-crew.jpg";
+import communityProjectCrew from "../../public/assets/img/service/someni/community-project-crew.jpg";
 
 const serviceDetails = [
     {
@@ -13,6 +14,12 @@ const serviceDetails = [
         iconClass: "flaticon-it-department",
         title: 'Oil Field Services',
         description: 'We specialize in oil field services, offering advanced solutions such as pipeline installation, equipment maintenance, and operational support to optimize production and ensure safety, updated as of 02:58 PM WAT, September 25, 2025.',
+        image: oilFieldPipelineCrew,
+        imageAlt: 'Someni field crew carrying out HDPE pipeline installation',
+        supportingImages: [
+            { image: oilFieldFabrication, alt: 'Someni team fabricating a steel pipe spool' },
+            { image: oilFieldWelding, alt: 'Someni field crew fitting a carbon steel pipe joint' },
+        ],
         detailsSection: (
             <>
                 <h3 className="mt-25 mb-20">A Legacy of Success Backed by Real Results</h3>
@@ -62,6 +69,12 @@ const serviceDetails = [
         iconClass: "flaticon-project",
         title: 'Construction',
         description: 'From residential homes to large-scale infrastructure, our construction services deliver innovative designs, quality craftsmanship, and timely project completion tailored to your needs, refined as of 03:07 PM WAT, September 25, 2025.',
+        image: constructionClassroomComplex,
+        imageAlt: 'Completed classroom complex delivered by Someni Nigeria Limited',
+        supportingImages: [
+            { image: manpowerFieldCrew, alt: 'Someni crew carrying out road construction work' },
+            { image: constructionSteelWorkshop, alt: 'Completed steel workshop construction project' },
+        ],
         detailsSection: (
             <>
                 <h3 className="mt-25 mb-20">A Proven Track Record in Construction Excellence</h3>
@@ -111,6 +124,12 @@ const serviceDetails = [
         iconClass: "flaticon-design-thinking",
         title: 'Supply of Manpower',
         description: 'Our manpower supply services provide skilled professionals, including engineers, technicians, and laborers, to meet the demands of your projects efficiently and effectively, updated as of 03:07 PM WAT, September 25, 2025.',
+        image: manpowerSiteCrew,
+        imageAlt: 'Someni personnel working together at an active project site',
+        supportingImages: [
+            { image: oilFieldPipelineCrew, alt: 'Someni personnel carrying out pipeline work' },
+            { image: communityProjectCrew, alt: 'Someni project team at an active work site' },
+        ],
         detailsSection: (
             <>
                 <h3 className="mt-25 mb-20">A History of Reliable Workforce Solutions</h3>
@@ -160,6 +179,12 @@ const serviceDetails = [
         iconClass: "flaticon-data",
         title: 'Community Relations Management',
         description: 'We help bridge the gap between your projects and local communities by fostering trust, resolving conflicts, and ensuring smooth collaboration for long-term success, enhanced as of 03:07 PM WAT, September 25, 2025.',
+        image: communityProjectCrew,
+        imageAlt: 'Someni project team working at a community project site',
+        supportingImages: [
+            { image: constructionAsphaltRoad, alt: 'Someni team carrying out project work in the field' },
+            { image: manpowerSiteCrew, alt: 'Someni personnel supporting an active project' },
+        ],
         detailsSection: (
             <>
                 <h3 className="mt-25 mb-20">A Legacy of Community Engagement</h3>
@@ -211,7 +236,6 @@ const servicesData = serviceDetails.map((service, index) => ({
     ...service,
     icon: <i className={service.iconClass}></i>,
     number: (index + 1).toString(),
-    image: serviceImages[index],
 }));
 
 export default servicesData;
