@@ -1,0 +1,104 @@
+.projects__controls {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.projects__search {
+    align-items: center;
+    border: 1px solid #d8dedb;
+    display: flex;
+    gap: 12px;
+    padding: 0 18px;
+}
+
+.projects__search i { color: #159447; }
+
+.projects__search input {
+    background: transparent;
+    border: 0;
+    color: #1b1b1b;
+    font-size: 16px;
+    min-height: 54px;
+    outline: 0;
+    width: 100%;
+}
+
+.projects__filters { display: flex; flex-wrap: wrap; gap: 10px; }
+
+.projects__filters button {
+    background: #f4f6f4;
+    border: 1px solid #d8dedb;
+    color: #1b1b1b;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 10px 15px;
+}
+
+.projects__filters button.active,
+.projects__filters button:hover {
+    background: #159447;
+    border-color: #159447;
+    color: #fff;
+}
+
+.projects__result-count { color: #6d6d6d; font-size: 15px; }
+
+.projects__table-wrap {
+    border: 1px solid #e3e7e4;
+    overflow-x: auto;
+}
+
+.projects__table { border-collapse: collapse; min-width: 960px; width: 100%; }
+
+.projects__table th {
+    background: #103b2d;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 600;
+    padding: 18px 20px;
+    text-align: left;
+    white-space: nowrap;
+}
+
+.projects__table td {
+    border-top: 1px solid #e3e7e4;
+    color: #454545;
+    font-size: 15px;
+    line-height: 1.5;
+    padding: 17px 20px;
+    vertical-align: top;
+}
+
+.projects__table tbody tr:nth-child(even) { background: #f8faf8; }
+.projects__table th:first-child, .projects__table td:first-child { min-width: 310px; }
+.projects__table th:nth-child(2), .projects__table td:nth-child(2) { min-width: 150px; }
+.projects__table th:nth-child(3), .projects__table td:nth-child(3) { min-width: 190px; }
+.projects__table th:nth-child(4), .projects__table td:nth-child(4) { min-width: 120px; }
+
+.projects__status {
+    background: #e5f5ea;
+    border-radius: 20px;
+    color: #13753a;
+    display: inline-block;
+    font-size: 13px;
+    font-weight: 700;
+    padding: 5px 10px;
+    white-space: nowrap;
+}
+
+.projects__empty { margin: 24px; text-align: center; }
+
+.sr-only {
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+    clip: rect(0, 0, 0, 0);
+}
+
+@media (max-width: 575px) {
+    .projects__filters button { font-size: 13px; padding: 9px 12px; }
+}

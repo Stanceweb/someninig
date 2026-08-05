@@ -25,6 +25,7 @@ const ResponsiveMenu = ({ onNavigate }) => {
             <button className={`mean-expand ${activeIcon("pages")}`} type="button" aria-label="Toggle Pages submenu" aria-expanded={activeMenu === "pages"} aria-controls="mobile-pages-submenu" onClick={() => active("pages")}></button>
         </li>
         <li><Link href='/portfolio/3-columns' title="Portfolio Gallery" {...linkProps}>Portfolio</Link></li>
+        <li><Link href='/projects' title="Completed Projects" {...linkProps}>Projects</Link></li>
         <li className='menu-item-has-children'>
             <Link href='/services/tools' title="Construction Tools" {...linkProps}>Tools</Link>
             <ul id="mobile-tools-submenu" className='sub-menu' style={activeSubMenu("tools")}>

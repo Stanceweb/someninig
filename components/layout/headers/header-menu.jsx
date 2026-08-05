@@ -20,6 +20,7 @@ const MainMenu = () => {
                     </ul>
                 </li>
                 <li><Link href='/portfolio/3-columns' title="Portfolio Gallery">Portfolio</Link></li>
+                <li><Link href='/projects' title="Completed Projects">Projects</Link></li>
                 <li className='menu-item-has-children'>
                     <Link href='/services/tools' title="Construction Tools">Tools</Link>
                     <ul className='sub-menu'>
