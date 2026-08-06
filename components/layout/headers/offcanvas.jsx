@@ -86,6 +86,15 @@ const SideBar = ({ isOpen, setIsOpen, onClose }) => {
                             <h6><Link href="https://maps.app.goo.gl/CDYMLqBjQcsLbicc6" target="_blank">No. 62 Uti Road, Off PTI Road, Effurun, Delta State, Nigeria</Link></h6>
                         </div>
                     </div>
+                    <div className="header__area-menubar-right-sidebar-popup-contact-item">
+                        <div className="header__area-menubar-right-sidebar-popup-contact-item-icon">
+                            <i className="flaticon-right-up"></i>
+                        </div>
+                        <div className="header__area-menubar-right-sidebar-popup-contact-item-content">
+                            <span>Someni AI:</span>
+                            <h6><Link href="https://chat.someninigltd.com" target="_blank" rel="noopener noreferrer">Open Someni AI</Link></h6>
+                        </div>
+                    </div>
                 </div>
                 <div className="header__area-menubar-right-sidebar-popup-social">
                     <Social />							

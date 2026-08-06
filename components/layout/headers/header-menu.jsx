@@ -1,63 +1,36 @@
 import Link from "next/link";
 import React from 'react';
 
-const MainMenu = () => {
-    // Main navigation menu for site SEO and accessibility
-    return (
-        <>
-            <ul>
-                <li><Link href='/' title="Home page">Home</Link></li>
-                <li className='menu-item-has-children'>
-                    <Link href='/about-us' title="Pages overview">Pages</Link>
-                    <ul className='sub-menu'>
-                        <li><Link href='/about-us' title="About Us">About Us</Link></li>
-                        <li><Link href='/history' title="Company History">Company History</Link></li>
-                        <li><Link href='/services' title="Our Services">Services</Link></li>
-                        <li><Link href='/testimonial' title="Testimonials">Testimonials</Link></li>
-                        <li><Link href='/faq' title="Frequently Asked Questions">FAQ's</Link></li>
-                        <li><Link href='/awards' title="Awards and Recognitions">Awards &amp; Recognitions</Link></li>
-                        <li><Link href='/request-quote' title="Request a Quote">Request Quote</Link></li>
-                    </ul>
-                </li>
-                <li><Link href='/portfolio/3-columns' title="Portfolio Gallery">Portfolio</Link></li>
-                <li><Link href='/projects' title="Completed Projects">Projects</Link></li>
-                <li className='menu-item-has-children'>
-                    <Link href='/services/tools' title="Construction Tools">Tools</Link>
-                    <ul className='sub-menu'>
-                        <li><Link href='/services/tools/cost-calculator' title="Project Cost Calculator">Cost Calculator</Link></li>
-                        <li><Link href='/services/tools/material-calculator' title="Material Calculator">Material Calculator</Link></li>
-                        <li><Link href='/services/tools/instant-quote' title="Instant Quote Generator">Instant Quote</Link></li>
-                        <li><Link href='/services/tools/timeline-estimator' title="Project Timeline Estimator">Timeline Estimator</Link></li>
-                    </ul>
-                </li>
-                <li><Link href='/blog' title="Blog">Blog</Link></li>
-                <li>
-                    <Link
-                        href='https://blog.someninigltd.com/'
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        title="News and Insights (opens in new tab)"
-                        aria-label="News and Insights (opens in new tab)"
-                    >
-                        News &amp; Insights
-                    </Link>
-                </li>
-                <li>
-                    {/* External AI chat link */}
-                    <Link 
-                        href='https://chat.someninigltd.com' 
-                        target="_blank" 
-                        rel="noopener noreferrer"
-                        title="Someni AI Chat (opens in new tab)"
-                        aria-label="Someni AI Chat (opens in new tab)"
-                    >
-                        Someni AI
-                    </Link>
-                </li>
-                <li><Link href='/contact-us' title="Contact Us">Contact Us</Link></li>
+const MainMenu = () => (
+    <ul>
+        <li><Link href='/' title="Home page">Home</Link></li>
+        <li className='menu-item-has-children'>
+            <Link href='/about-us' title="About Someni Nigeria Limited">About</Link>
+            <ul className='sub-menu'>
+                <li><Link href='/about-us' title="About Us">About Us</Link></li>
+                <li><Link href='/history' title="Company History">Company History</Link></li>
+                <li><Link href='/awards' title="Awards and Recognitions">Awards &amp; Recognitions</Link></li>
+                <li><Link href='/testimonial' title="Testimonials">Testimonials</Link></li>
             </ul>
-        </>
-    );
-};
+        </li>
+        <li className='menu-item-has-children'>
+            <Link href='/services' title="Our Services">Services</Link>
+            <ul className='sub-menu'>
+                <li><Link href='/services' title="Services Overview">Services Overview</Link></li>
+                <li><Link href='/services/tools' title="Project Tools">Project Tools</Link></li>
+                <li><Link href='/faq' title="Frequently Asked Questions">FAQ&apos;s</Link></li>
+            </ul>
+        </li>
+        <li><Link href='/projects' title="Completed Projects">Projects</Link></li>
+        <li className='menu-item-has-children'>
+            <Link href='/blog' title="Insights">Insights</Link>
+            <ul className='sub-menu'>
+                <li><Link href='/blog' title="Blog">Blog</Link></li>
+                <li><Link href='https://blog.someninigltd.com/' target="_blank" rel="noopener noreferrer" title="News and Insights (opens in new tab)">News &amp; Insights</Link></li>
+            </ul>
+        </li>
+        <li><Link href='/contact-us' title="Contact Us">Contact</Link></li>
+    </ul>
+);
 
 export default MainMenu;
