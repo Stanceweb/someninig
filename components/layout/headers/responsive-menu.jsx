@@ -42,6 +42,7 @@ const ResponsiveMenu = ({ onNavigate }) => {
                 <button className={`mean-expand ${activeIcon('insights')}`} type="button" aria-label="Toggle Insights submenu" aria-expanded={activeMenu === 'insights'} aria-controls="mobile-insights-submenu" onClick={() => active('insights')}></button>
             </li>
             <li><Link href='/contact-us' title="Contact Us" {...linkProps}>Contact</Link></li>
+            <li><Link href='https://chat.someninigltd.com' target="_blank" rel="noopener noreferrer" title="Someni AI (opens in new tab)" onClick={onNavigate}>Someni AI</Link></li>
         </ul>
     );
 };
