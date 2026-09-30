@@ -22,7 +22,7 @@ const ContactMain = () => {
                                         </div>
                                         <div className="contact__area-left-contact-item-content">
                                             <span>Phone:</span>
-                                            <h6><Link href="tel:08068472444">08068472444</Link> | <Link href="tel:08030646966">08030646966</Link></h6>
+                                            <h6><Link href="tel:08068472444">08068472444</Link> | <Link href="tel:08030646966">08030646966</Link> | <Link href="tel:09111550011">09111550011</Link></h6>
                                         </div>
                                     </div>
                                     <div className="contact__area-left-contact-item">

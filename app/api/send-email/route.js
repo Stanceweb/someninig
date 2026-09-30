@@ -25,7 +25,7 @@ export async function POST(request) {
     });
 
     // Branded, engaging thank you message
-    const responseMessage = `Hi ${name || "there"},\n\nThank you for reaching out to Someni Nigeria Limited. From our headquarters in Effurun, we support engineering and specialist projects across Nigeria. Our team has received your message and will respond as soon as possible.\n\nIf your inquiry is urgent, please call us at 08068472444 or 08030646966 for immediate assistance.\n\nBest regards,\nSomeni Nigeria Limited\nNo. 62 Uti Road, Off PTI Road, Effurun, Delta State, Nigeria\nwww.someninig.com`;
+    const responseMessage = `Hi ${name || "there"},\n\nThank you for reaching out to Someni Nigeria Limited. From our headquarters in Effurun, we support engineering and specialist projects across Nigeria. Our team has received your message and will respond as soon as possible.\n\nIf your inquiry is urgent, please call us at 08068472444, 08030646966, or 09111550011 for immediate assistance.\n\nBest regards,\nSomeni Nigeria Limited\nNo. 62 Uti Road, Off PTI Road, Effurun, Delta State, Nigeria\nwww.someninig.com`;
 
     await transporter.sendMail({
       from: "contact@someninigltd.com", // Changed from process.env.EMAIL_USER to match authenticated user
@@ -34,7 +34,7 @@ export async function POST(request) {
       text: responseMessage,
       html: `<p>Hi <strong>${name || "there"}</strong>,</p>
              <p>Thank you for reaching out to <strong>Someni Nigeria Limited</strong>. From our headquarters in Effurun, we support engineering and specialist projects across Nigeria. Our team has received your message and will respond as soon as possible.</p>
-             <p>If your inquiry is urgent, please call us at <a href="tel:08068472444">08068472444</a> or <a href="tel:08030646966">08030646966</a> for immediate assistance.</p>
+             <p>If your inquiry is urgent, please call us at <a href="tel:08068472444">08068472444</a>, <a href="tel:08030646966">08030646966</a>, or <a href="tel:09111550011">09111550011</a> for immediate assistance.</p>
              <p>Best regards,<br/>
              <strong>Someni Nigeria Limited</strong><br/>
              No. 62 Uti Road, Off PTI Road, Effurun, Delta State, Nigeria<br/>

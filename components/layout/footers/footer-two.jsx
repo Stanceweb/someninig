@@ -57,7 +57,7 @@ const FooterTwo = () => {
                                             <i className="flaticon-phone"></i>
                                         </div>
                                         <div className="footer__two-widget-location-item-info">
-                                            <Link href="tel:08068472444">08068472444</Link> | <Link href="tel:08030646966">08030646966</Link>
+                                            <Link href="tel:08068472444">08068472444</Link> | <Link href="tel:08030646966">08030646966</Link> | <Link href="tel:09111550011">09111550011</Link>
                                         </div>
                                     </div>
                                     <div className="footer__two-widget-location-item">
