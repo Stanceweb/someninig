@@ -34,20 +34,26 @@ const RequestQuoteMain = () => {
 		setSubmitStatus(null);
 
 		try {
-			const response = await fetch('/__forms.html', {
+			const emailBody = `
+Name: ${formData.firstName} ${formData.lastName}
+Phone: ${formData.phone}
+Company: ${formData.company}
+State: ${formData.state}
+Services: ${formData.services.join(', ')}
+
+Project Details:
+${formData.message}
+			`.trim();
+
+			const response = await fetch('/api/send-email', {
 				method: 'POST',
-				headers: { "Content-Type": "application/x-www-form-urlencoded" },
-				body: new URLSearchParams({
-					'form-name': 'request-quote',
-					'firstName': formData.firstName,
-					'lastName': formData.lastName,
-					'email': formData.email,
-					'phone': formData.phone,
-					'company': formData.company,
-					'state': formData.state,
-					'services': formData.services.join(', '),
-					'message': formData.message
-				}).toString()
+				headers: { "Content-Type": "application/json" },
+				body: JSON.stringify({
+					name: `${formData.firstName} ${formData.lastName}`.trim(),
+					to: formData.email,
+					subject: 'New Quote Request',
+					text: emailBody
+				})
 			});
 
 			if (response.ok) {
@@ -80,16 +86,8 @@ const RequestQuoteMain = () => {
 						<div className="col-xl-12">
 							<form 
 								name="request-quote" 
-								method="POST" 
-								data-netlify="true" 
-								data-netlify-honeypot="bot-field"
 								onSubmit={handleSubmit}
 							>
-								{/* Hidden fields for Netlify Forms */}
-								<input type="hidden" name="form-name" value="request-quote" />
-								<p style={{ display: 'none' }}>
-									<label>Don't fill this out if you're human: <input name="bot-field" /></label>
-								</p>
 								<div className="row">
 									<div className="col-md-6 mt-30">
 										<div className="request__quote-item">
