@@ -23,16 +23,15 @@ const FormArea = () => {
         setSubmitStatus(null);
 
         try {
-            const response = await fetch('/__forms.html', {
+            const response = await fetch('/api/send-email', {
                 method: 'POST',
-                headers: { "Content-Type": "application/x-www-form-urlencoded" },
-                body: new URLSearchParams({
-                    'form-name': 'contact',
-                    'name': formData.name,
-                    'email': formData.email,
-                    'subject': formData.subject,
-                    'message': formData.message
-                }).toString()
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({
+                    name: formData.name,
+                    to: formData.email,
+                    subject: formData.subject || 'New Contact Form Submission',
+                    text: formData.message
+                })
             });
 
             if (response.ok) {
@@ -52,17 +51,8 @@ const FormArea = () => {
         <>
             <form 
                 name="contact" 
-                method="POST" 
-                data-netlify="true" 
-                data-netlify-honeypot="bot-field"
                 onSubmit={handleSubmit}
             >
-                {/* Hidden fields for Netlify Forms */}
-                <input type="hidden" name="form-name" value="contact" />
-                <p style={{ display: 'none' }}>
-                    <label>Don't fill this out if you're human: <input name="bot-field" /></label>
-                </p>
-                
                 <div className="row">
                     <div className="col-md-6 mb-25">
                         <div className="contact__form-area-item">
