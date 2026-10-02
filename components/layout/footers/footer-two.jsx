@@ -49,7 +49,7 @@ const FooterTwo = () => {
                                             <i className="flaticon-location"></i>
                                         </div>
                                         <div className="footer__two-widget-location-item-info">
-                                            <Link href="https://maps.app.goo.gl/CDYMLqBjQcsLbicc6">No. 62 Uti Road, Off PTI Road, Effurun, Delta State, Nigeria</Link>
+                                            <Link href="https://maps.app.goo.gl/CDYMLqBjQcsLbicc6">No. 63 Someni Road, Off PTI Road, Effurun, Delta State, Nigeria</Link>
                                         </div>
                                     </div>
                                     <div className="footer__two-widget-location-item">

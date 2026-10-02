@@ -40,7 +40,7 @@ const ContactMain = () => {
                                         </div>
                                         <div className="contact__area-left-contact-item-content">
                                             <span>Head Office:</span>
-                                            <h6><Link href="https://maps.app.goo.gl/CDYMLqBjQcsLbicc6" target="_blank">No. 62 Uti Road, Off PTI Road, Effurun, Delta State, Nigeria</Link></h6>
+                                            <h6><Link href="https://maps.app.goo.gl/CDYMLqBjQcsLbicc6" target="_blank">No. 63 Someni Road, Off PTI Road, Effurun, Delta State, Nigeria</Link></h6>
                                         </div>
                                     </div>
                                 </div>
