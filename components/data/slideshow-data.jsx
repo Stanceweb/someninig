@@ -29,8 +29,6 @@ import someniTechnicalTeamAfamVi from "../../public/assets/img/gallary/SOMENI-TE
 import sprayPaintingOperation from "../../public/assets/img/gallary/SPRAY-PAINITING-OPERATION.jpg";
 import weldingFlareStack from "../../public/assets/img/gallary/WELDING-OF-FLARE-STACK.jpg";
 import weldingHeaderTubesAfamVi from "../../public/assets/img/gallary/WELDING-OF-HEADER-TUBES-AT-AFAM-VI-PROJECT.JPG";
-import whatsappImage from "../../public/assets/img/gallary/WhatsApp-Image.jpg";
-import whatsappImage2 from "../../public/assets/img/gallary/WhatsApp-Image2.jpg";
 
 const slideshowData = [
     {
@@ -218,19 +216,7 @@ const slideshowData = [
         image: weldingHeaderTubesAfamVi,
         title: 'Welding of Header Tubes at Afam VI Project',
         description: 'Tube welding for evaporator headers.',
-    },
-    {
-        id: 'whatsapp-image',
-        image: whatsappImage,
-        title: 'WhatsApp Image - Project Snapshot',
-        description: 'Quick project update image.',
-    },
-    {
-        id: 'whatsapp-image2',
-        image: whatsappImage2,
-        title: 'WhatsApp Image 2 - Site View',
-        description: 'Additional on-site documentation.',
-    },
+    }
 ];
 
 export default slideshowData;
