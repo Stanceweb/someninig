@@ -66,7 +66,7 @@ const slideshowData = [
     {
         id: 'dscn2130',
         image: dscn2130,
-        title: 'DSCN2130 - Pipeline Works',
+        title: 'Replacement of LP Evaporator Headers and Tubes at Afam VI Power Plant',
         description: 'Pipeline stringing and welding in progress.',
     },
     {
